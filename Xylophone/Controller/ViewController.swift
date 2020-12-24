@@ -10,13 +10,24 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var cButton: UIButton!
+    @IBOutlet weak var dButton: UIButton!
+    @IBOutlet weak var eButton: UIButton!
+    @IBOutlet weak var fButton: UIButton!
+    @IBOutlet weak var gButton: UIButton!
+    @IBOutlet weak var aButton: UIButton!
+    @IBOutlet weak var bButton: UIButton!
+    
     var player: AVAudioPlayer?
     let sounds = ["C", "D", "E", "F", "G", "A", "B"]
     var expectedSounds = [String]()
     var currentIndex = 0
+    var buttons = [UIButton]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttons = [cButton, dButton, eButton, fButton, gButton, aButton, bButton]
+        setKeysClickable(to: false)
         expectedSounds = generateKeys(lower: 3, upper: 7)
         playKeys(expectedSounds)
         // Do any additional setup after loading the view.
@@ -57,6 +68,16 @@ class ViewController: UIViewController {
                 self.playSound(soundName: key)
             }
             delay += 1
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.setKeysClickable(to: true)
+        }
+    }
+    
+    func setKeysClickable(to isClickable: Bool){
+        for button in buttons {
+            print("hello")
+            button.isEnabled = isClickable
         }
     }
     

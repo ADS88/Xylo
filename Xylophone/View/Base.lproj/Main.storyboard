@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="r7g-lT-lgv">
-                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="r7g-lT-lgv" userLabel="Key Stack View">
+                                <rect key="frame" x="0.0" y="104.5" width="414" height="737.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j97-PM-FpI" userLabel="cButton">
-                                        <rect key="frame" x="10" y="0.0" width="354" height="94"/>
+                                        <rect key="frame" x="10" y="0.0" width="394" height="88"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,7 +31,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecQ-Vn-3G8" userLabel="dButton">
-                                        <rect key="frame" x="15" y="114" width="344" height="94"/>
+                                        <rect key="frame" x="15" y="108" width="384" height="88.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-37-1Na" userLabel="eButton">
-                                        <rect key="frame" x="20" y="228" width="334" height="94"/>
+                                        <rect key="frame" x="20" y="216.5" width="374" height="88"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,7 +51,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-8t-kY4" userLabel="fButton">
-                                        <rect key="frame" x="25" y="342" width="324" height="94"/>
+                                        <rect key="frame" x="25" y="324.5" width="364" height="88.5"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +61,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-6z-YIv" userLabel="gButton">
-                                        <rect key="frame" x="30" y="456" width="314" height="94"/>
+                                        <rect key="frame" x="30" y="433" width="354" height="88"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dw-5P-mW8" userLabel="aButton">
-                                        <rect key="frame" x="35" y="570" width="304" height="94"/>
+                                        <rect key="frame" x="35" y="541" width="344" height="88.5"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,7 +81,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UI-LJ-jST" userLabel="bButton">
-                                        <rect key="frame" x="40" y="684" width="294" height="94"/>
+                                        <rect key="frame" x="40" y="649.5" width="334" height="88"/>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,17 +108,38 @@
                                     <constraint firstItem="j97-PM-FpI" firstAttribute="leading" secondItem="r7g-lT-lgv" secondAttribute="leading" constant="10" id="u5S-kx-PFp"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="262" translatesAutoresizingMaskIntoConstraints="NO" id="Yb1-lf-J8P" userLabel="Score Stack View">
+                                <rect key="frame" x="10" y="64" width="362" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgA-lX-yLD" userLabel="Score label">
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r7g-lT-lgv" secondAttribute="bottom" constant="20" id="36E-vl-1ZP"/>
-                            <constraint firstItem="r7g-lT-lgv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kAk-CQ-nhg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r7g-lT-lgv" secondAttribute="trailing" constant="20" id="syq-eA-ib0"/>
-                            <constraint firstItem="r7g-lT-lgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xE6-eb-oU5"/>
+                            <constraint firstItem="r7g-lT-lgv" firstAttribute="top" secondItem="Yb1-lf-J8P" secondAttribute="bottom" constant="20" id="7wi-6b-XD7"/>
+                            <constraint firstItem="Yb1-lf-J8P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="IyR-RW-Q4W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yb1-lf-J8P" secondAttribute="trailing" constant="42" id="UAD-Gg-88b"/>
+                            <constraint firstItem="Yb1-lf-J8P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mpV-mE-0Uk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r7g-lT-lgv" secondAttribute="trailing" id="syq-eA-ib0"/>
+                            <constraint firstItem="r7g-lT-lgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xE6-eb-oU5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="aButton" destination="9dw-5P-mW8" id="K4z-Cq-7x2"/>
+                        <outlet property="bButton" destination="4UI-LJ-jST" id="uYg-XX-kHd"/>
+                        <outlet property="cButton" destination="j97-PM-FpI" id="sM1-Ap-def"/>
+                        <outlet property="dButton" destination="ecQ-Vn-3G8" id="Ml8-4r-3vW"/>
+                        <outlet property="eButton" destination="n1S-37-1Na" id="lvk-RW-j5Z"/>
+                        <outlet property="fButton" destination="Lbz-8t-kY4" id="V4n-vW-IBx"/>
+                        <outlet property="gButton" destination="S8U-6z-YIv" id="6CR-gM-VHE"/>
                         <segue destination="aiR-7Q-S6h" kind="show" identifier="goToGameOver" id="LKK-LE-c8k"/>
                     </connections>
                 </viewController>
