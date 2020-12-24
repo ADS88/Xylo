@@ -56,15 +56,23 @@
 		49B597A925940D6600300565 /* Xylophone */ = {
 			isa = PBXGroup;
 			children = (
+				49B597C025940DD300300565 /* View */,
 				49B597AA25940D6600300565 /* AppDelegate.swift */,
 				49B597AC25940D6600300565 /* SceneDelegate.swift */,
 				49B597AE25940D6600300565 /* ViewController.swift */,
-				49B597B025940D6600300565 /* Main.storyboard */,
 				49B597B325940D6700300565 /* Assets.xcassets */,
 				49B597B525940D6700300565 /* LaunchScreen.storyboard */,
 				49B597B825940D6700300565 /* Info.plist */,
 			);
 			path = Xylophone;
+			sourceTree = "<group>";
+		};
+		49B597C025940DD300300565 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49B597B025940D6600300565 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Xylophone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +315,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Xylophone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
