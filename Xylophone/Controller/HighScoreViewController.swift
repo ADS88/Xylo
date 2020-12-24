@@ -11,8 +11,20 @@ class HighScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getData()
         // Do any additional setup after loading the view.
+    }
+    
+    func getData(){
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        do {
+            let scores: [HighScore] = try context.fetch(HighScore.fetchRequest())
+            for score in scores {
+                print(score.score)
+            }
+        } catch {
+            print("error")
+        }
     }
     
 

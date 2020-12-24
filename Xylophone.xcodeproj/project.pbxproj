@@ -23,6 +23,7 @@
 		49B597D825941D8A00300565 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597D725941D8A00300565 /* GameOverViewController.swift */; };
 		49B597E125942E0500300565 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597E025942E0500300565 /* MenuViewController.swift */; };
 		49B597E52594342700300565 /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597E42594342700300565 /* HighScoreViewController.swift */; };
+		49B99D7E25946999005E15B6 /* Xylophone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49B99D61259463B6005E15B6 /* Xylophone.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		49B597D725941D8A00300565 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		49B597E025942E0500300565 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		49B597E42594342700300565 /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
+		49B99D62259463B6005E15B6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +78,12 @@
 		49B597A925940D6600300565 /* Xylophone */ = {
 			isa = PBXGroup;
 			children = (
+				49B99D7825946613005E15B6 /* Model */,
 				49B597C52594184A00300565 /* Sounds */,
 				49B597C2259416B100300565 /* Controller */,
 				49B597C025940DD300300565 /* View */,
 				49B597AA25940D6600300565 /* AppDelegate.swift */,
+				49B99D61259463B6005E15B6 /* Xylophone.xcdatamodeld */,
 				49B597AC25940D6600300565 /* SceneDelegate.swift */,
 				49B597B325940D6700300565 /* Assets.xcassets */,
 				49B597B525940D6700300565 /* LaunchScreen.storyboard */,
@@ -119,6 +123,13 @@
 				49B597CC2594184A00300565 /* D.wav */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		49B99D7825946613005E15B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			files = (
 				49B597D825941D8A00300565 /* GameOverViewController.swift in Sources */,
 				49B597E125942E0500300565 /* MenuViewController.swift in Sources */,
+				49B99D7E25946999005E15B6 /* Xylophone.xcdatamodeld in Sources */,
 				49B597AF25940D6600300565 /* ViewController.swift in Sources */,
 				49B597AB25940D6600300565 /* AppDelegate.swift in Sources */,
 				49B597AD25940D6600300565 /* SceneDelegate.swift in Sources */,
@@ -405,6 +417,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		49B99D61259463B6005E15B6 /* Xylophone.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49B99D62259463B6005E15B6 /* Model.xcdatamodel */,
+			);
+			currentVersion = 49B99D62259463B6005E15B6 /* Model.xcdatamodel */;
+			path = Xylophone.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 49B5979F25940D6600300565 /* Project object */;
 }

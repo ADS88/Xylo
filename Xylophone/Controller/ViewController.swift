@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var player: AVAudioPlayer?
     let sounds = ["C", "D", "E", "F", "G", "A", "B"]
     var expectedSounds = [String]()
@@ -27,7 +29,7 @@ class ViewController: UIViewController {
     var soundToButton = [String:UIButton]()
     var leastKeysPlayed = 1
     var mostKeysPlayed = 3
-    var score = 0
+    var score: Int64 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,11 +56,20 @@ class ViewController: UIViewController {
             score += 1
             scoreLabel.text = "Score: \(score)"
         } else {
+            createHighScore()
             self.performSegue(withIdentifier: "goToGameOver", sender: self)
         }
         if currentIndex >= expectedSounds.count {
             newSetOfKeys()
         }
+    }
+    
+    func createHighScore(){
+        let highScore = HighScore(context: context)
+        highScore.name = "Andrew"
+        highScore.score = score
+        highScore.date = Date()
+        try! self.context.save()
     }
     
     func buttonOpaqueOnClickEffect(button: UIButton, newOpacity: CGFloat){
@@ -108,7 +119,6 @@ class ViewController: UIViewController {
     }
     
     func playSound(soundName: String) {
-        print(soundName)
         guard let url = Bundle.main.url(forResource: soundName, withExtension: "wav") else { return }
             do {
                 try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)

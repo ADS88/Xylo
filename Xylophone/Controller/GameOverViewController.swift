@@ -10,7 +10,7 @@ import UIKit
 class GameOverViewController: UIViewController {
 
     @IBOutlet weak var scoreText: UILabel!
-    var score: Int = 0
+    var score: Int64 = 0
     
     @IBAction func playAgainPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: "playAgain", sender: self)
