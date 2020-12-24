@@ -20,6 +20,7 @@
 		49B597D12594184A00300565 /* G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49B597CA2594184A00300565 /* G.wav */; };
 		49B597D22594184A00300565 /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49B597CB2594184A00300565 /* E.wav */; };
 		49B597D32594184A00300565 /* D.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49B597CC2594184A00300565 /* D.wav */; };
+		49B597D825941D8A00300565 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597D725941D8A00300565 /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		49B597CA2594184A00300565 /* G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = G.wav; sourceTree = "<group>"; };
 		49B597CB2594184A00300565 /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = E.wav; sourceTree = "<group>"; };
 		49B597CC2594184A00300565 /* D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = D.wav; sourceTree = "<group>"; };
+		49B597D725941D8A00300565 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				49B597AE25940D6600300565 /* ViewController.swift */,
+				49B597D725941D8A00300565 /* GameOverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B597D825941D8A00300565 /* GameOverViewController.swift in Sources */,
 				49B597AF25940D6600300565 /* ViewController.swift in Sources */,
 				49B597AB25940D6600300565 /* AppDelegate.swift in Sources */,
 				49B597AD25940D6600300565 /* SceneDelegate.swift in Sources */,
