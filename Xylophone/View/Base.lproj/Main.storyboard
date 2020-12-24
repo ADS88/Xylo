@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E9b-5O-xJQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Game View Controller" customClass="ViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,6 +132,7 @@
                             <constraint firstItem="r7g-lT-lgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xE6-eb-oU5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Djw-nu-lJo"/>
                     <connections>
                         <outlet property="aButton" destination="9dw-5P-mW8" id="K4z-Cq-7x2"/>
                         <outlet property="bButton" destination="4UI-LJ-jST" id="uYg-XX-kHd"/>
@@ -141,7 +142,7 @@
                         <outlet property="fButton" destination="Lbz-8t-kY4" id="V4n-vW-IBx"/>
                         <outlet property="gButton" destination="S8U-6z-YIv" id="6CR-gM-VHE"/>
                         <outlet property="scoreLabel" destination="MgA-lX-yLD" id="S1V-F5-KcM"/>
-                        <segue destination="aiR-7Q-S6h" kind="show" identifier="goToGameOver" id="LKK-LE-c8k"/>
+                        <segue destination="aiR-7Q-S6h" kind="presentation" identifier="goToGameOver" modalPresentationStyle="fullScreen" id="LKK-LE-c8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,11 +154,11 @@
             <objects>
                 <viewController id="aiR-7Q-S6h" customClass="GameOverViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKM-Rn-Lbv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-Qh-cOC">
-                                <rect key="frame" x="107" y="334" width="200" height="174.5"/>
+                                <rect key="frame" x="107" y="361" width="200" height="174.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="14T-QL-sSF">
                                         <rect key="frame" x="14.5" y="0.0" width="171.5" height="78.5"/>
@@ -185,6 +186,9 @@
                                                     <constraint firstAttribute="width" constant="200" id="VNi-Ic-9m7"/>
                                                 </constraints>
                                                 <state key="normal" title="Play again"/>
+                                                <connections>
+                                                    <action selector="playAgainPressed:" destination="aiR-7Q-S6h" eventType="touchUpInside" id="osN-fs-0J6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVW-vP-asJ">
                                                 <rect key="frame" x="0.0" y="49" width="200" height="30"/>
@@ -192,6 +196,9 @@
                                                     <constraint firstAttribute="width" constant="200" id="cWM-lt-sa6"/>
                                                 </constraints>
                                                 <state key="normal" title="Main menu"/>
+                                                <connections>
+                                                    <action selector="goToMenuPressed:" destination="aiR-7Q-S6h" eventType="touchUpInside" id="VSo-UC-DwR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -208,13 +215,115 @@
                     <navigationItem key="navigationItem" id="gJp-6l-s0z"/>
                     <connections>
                         <outlet property="scoreText" destination="HbY-h7-as4" id="TUi-Ju-jRc"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="playAgain" modalPresentationStyle="fullScreen" id="gWA-Pk-PIj"/>
+                        <segue destination="E9b-5O-xJQ" kind="presentation" identifier="goToMenu" modalPresentationStyle="fullScreen" id="7bs-Zx-mps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lMz-8m-wa9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050" y="111"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="cBK-1D-k0R">
+            <objects>
+                <viewController id="E9b-5O-xJQ" userLabel="Menu View Controller" customClass="MenuViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I3b-44-1Mu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syG-Rh-cUr">
+                                <rect key="frame" x="10" y="248" width="394" height="400"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEf-x1-Xi9">
+                                        <rect key="frame" x="40" y="20" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="VRN-am-7LL">
+                                        <rect key="frame" x="20" y="187" width="300" height="166"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reK-yg-kDL">
+                                                <rect key="frame" x="135" y="0.0" width="30" height="30"/>
+                                                <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="playButtonClicked:" destination="F5P-SZ-D5V" eventType="touchUpInside" id="j1P-Fd-FAZ"/>
+                                                    <action selector="playButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="q77-AC-24A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-lc-m9r">
+                                                <rect key="frame" x="108" y="68" width="84" height="30"/>
+                                                <state key="normal" title="High Scores"/>
+                                                <connections>
+                                                    <action selector="highScoreButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="8kA-lU-aNC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaY-SI-MFN">
+                                                <rect key="frame" x="132" y="136" width="36" height="30"/>
+                                                <state key="normal" title="Shop"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="Gda-Tb-3OH"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="BVa-tp-ncF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uII-R4-i9e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="syG-Rh-cUr" firstAttribute="leading" secondItem="uII-R4-i9e" secondAttribute="leading" constant="10" id="KvV-hJ-S1M"/>
+                            <constraint firstItem="uII-R4-i9e" firstAttribute="trailing" secondItem="syG-Rh-cUr" secondAttribute="trailing" constant="10" id="Lm7-TG-CJf"/>
+                            <constraint firstItem="syG-Rh-cUr" firstAttribute="centerX" secondItem="I3b-44-1Mu" secondAttribute="centerX" id="PRw-wN-5KV"/>
+                            <constraint firstItem="syG-Rh-cUr" firstAttribute="centerY" secondItem="I3b-44-1Mu" secondAttribute="centerY" id="mqD-3D-oYg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToGame" modalPresentationStyle="fullScreen" id="7Lz-Ss-KXI"/>
+                        <segue destination="rQd-2B-ipT" kind="show" identifier="goToHighScore" id="Wr7-aW-deI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-Ri-sF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="F5P-SZ-D5V" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-729" y="110"/>
+        </scene>
+        <!--High Score View Controller-->
+        <scene sceneID="aht-nz-CqX">
+            <objects>
+                <viewController id="rQd-2B-ipT" userLabel="High Score View Controller" customClass="HighScoreViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQR-pV-NA9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High scores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-vL-k8T">
+                                <rect key="frame" x="161.5" y="410.5" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gB0-QP-zjK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gaI-vL-k8T" firstAttribute="centerY" secondItem="tQR-pV-NA9" secondAttribute="centerY" id="ITb-qd-iAr"/>
+                            <constraint firstItem="gaI-vL-k8T" firstAttribute="centerX" secondItem="tQR-pV-NA9" secondAttribute="centerX" id="aOs-dc-f2Y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MHp-ar-86n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYo-gf-tBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-730.43478260869574" y="794.19642857142856"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LKK-LE-c8k"/>
+        <segue reference="gWA-Pk-PIj"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
