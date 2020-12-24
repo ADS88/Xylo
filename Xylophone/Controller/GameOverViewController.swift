@@ -10,7 +10,7 @@ import UIKit
 class GameOverViewController: UIViewController {
 
     @IBOutlet weak var scoreText: UILabel!
-    let score = 34
+    var score: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

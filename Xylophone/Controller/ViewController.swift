@@ -17,44 +17,70 @@ class ViewController: UIViewController {
     @IBOutlet weak var gButton: UIButton!
     @IBOutlet weak var aButton: UIButton!
     @IBOutlet weak var bButton: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var player: AVAudioPlayer?
     let sounds = ["C", "D", "E", "F", "G", "A", "B"]
     var expectedSounds = [String]()
     var currentIndex = 0
     var buttons = [UIButton]()
+    var soundToButton = [String:UIButton]()
+    var leastKeysPlayed = 1
+    var mostKeysPlayed = 3
+    var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttons = [cButton, dButton, eButton, fButton, gButton, aButton, bButton]
-        setKeysClickable(to: false)
-        expectedSounds = generateKeys(lower: 3, upper: 7)
-        playKeys(expectedSounds)
+        soundToButton = [
+            "C": cButton,
+            "D": dButton,
+            "E": eButton,
+            "F": fButton,
+            "G": gButton,
+            "A": aButton,
+            "B": bButton
+        ]
+        newSetOfKeys()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func keyPressed(_ sender: UIButton) {
         let sound = sounds[sender.tag]
         playSound(soundName: sound)
-        buttonOpaqueOnClickEffect(button: sender)
+        buttonOpaqueOnClickEffect(button: sender, newOpacity: 0.5)
         if sound == expectedSounds[currentIndex] {
             currentIndex += 1
-            print("right key")
+            score += 1
+            scoreLabel.text = "Score: \(score)"
         } else {
             self.performSegue(withIdentifier: "goToGameOver", sender: self)
         }
+        if currentIndex >= expectedSounds.count {
+            newSetOfKeys()
+        }
     }
     
-    func buttonOpaqueOnClickEffect(button: UIButton){
-        button.alpha = 0.5
+    func buttonOpaqueOnClickEffect(button: UIButton, newOpacity: CGFloat){
+        let oringinalAlpha = button.alpha
+        button.alpha = newOpacity
           DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-              button.alpha = 1.0
+              button.alpha = oringinalAlpha
           }
     }
     
-    func generateKeys(lower: Int, upper: Int) -> [String] {
+    func newSetOfKeys(){
+        currentIndex = 0
+        setKeysClickable(to: false)
+        expectedSounds = generateKeys()
+        playKeys(expectedSounds)
+        leastKeysPlayed += 1
+        mostKeysPlayed += 1
+    }
+    
+    func generateKeys() -> [String] {
         var items = [String]()
-        let numKeys = Int.random(in: lower...upper)
+        let numKeys = Int.random(in: leastKeysPlayed...mostKeysPlayed)
         for _ in 0...numKeys{
             items.append(sounds.randomElement()!)
         }
@@ -66,6 +92,7 @@ class ViewController: UIViewController {
         for key in keys{
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 self.playSound(soundName: key)
+                self.buttonOpaqueOnClickEffect(button: self.soundToButton[key]! ,newOpacity: 0.0)
             }
             delay += 1
         }
@@ -74,10 +101,9 @@ class ViewController: UIViewController {
         }
     }
     
-    func setKeysClickable(to isClickable: Bool){
+    func setKeysClickable(to isEnabled: Bool){
         for button in buttons {
-            print("hello")
-            button.isEnabled = isClickable
+            button.isEnabled = isEnabled
         }
     }
     
@@ -96,6 +122,13 @@ class ViewController: UIViewController {
             } catch let error {
                 print(error.localizedDescription)
             }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGameOver"{
+            let destinationVC = segue.destination as! GameOverViewController
+            destinationVC.score = score
+        }
     }
 
 }

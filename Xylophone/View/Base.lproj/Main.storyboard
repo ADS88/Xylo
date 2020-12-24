@@ -140,6 +140,7 @@
                         <outlet property="eButton" destination="n1S-37-1Na" id="lvk-RW-j5Z"/>
                         <outlet property="fButton" destination="Lbz-8t-kY4" id="V4n-vW-IBx"/>
                         <outlet property="gButton" destination="S8U-6z-YIv" id="6CR-gM-VHE"/>
+                        <outlet property="scoreLabel" destination="MgA-lX-yLD" id="S1V-F5-KcM"/>
                         <segue destination="aiR-7Q-S6h" kind="show" identifier="goToGameOver" id="LKK-LE-c8k"/>
                     </connections>
                 </viewController>
