@@ -10,7 +10,7 @@ import UIKit
 class MenuViewController: UIViewController {
 
     @IBAction func playButtonClicked(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToGame", sender: self)
+        self.performSegue(withIdentifier: "goToGameOptions", sender: self)
     }
     
     @IBAction func highScoreButtonClicked(_ sender: UIButton) {

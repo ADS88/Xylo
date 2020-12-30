@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4966E0D1259C0676002E0C88 /* GameOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966E0D0259C0676002E0C88 /* GameOptionsViewController.swift */; };
 		49B597AB25940D6600300565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597AA25940D6600300565 /* AppDelegate.swift */; };
 		49B597AD25940D6600300565 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597AC25940D6600300565 /* SceneDelegate.swift */; };
 		49B597AF25940D6600300565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597AE25940D6600300565 /* ViewController.swift */; };
@@ -24,9 +25,11 @@
 		49B597E125942E0500300565 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597E025942E0500300565 /* MenuViewController.swift */; };
 		49B597E52594342700300565 /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597E42594342700300565 /* HighScoreViewController.swift */; };
 		49B99D7E25946999005E15B6 /* Xylophone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49B99D61259463B6005E15B6 /* Xylophone.xcdatamodeld */; };
+		734D60898F081EFD444BA805 /* Pods_Xylophone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9989F2061BAEF63FF9F74D /* Pods_Xylophone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4966E0D0259C0676002E0C88 /* GameOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsViewController.swift; sourceTree = "<group>"; };
 		49B597A725940D6600300565 /* Xylophone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xylophone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B597AA25940D6600300565 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B597AC25940D6600300565 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,9 @@
 		49B597E025942E0500300565 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		49B597E42594342700300565 /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		49B99D62259463B6005E15B6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4B9989F2061BAEF63FF9F74D /* Pods_Xylophone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xylophone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6019D872FC8F6DAEA2AF5978 /* Pods-Xylophone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xylophone.release.xcconfig"; path = "Target Support Files/Pods-Xylophone/Pods-Xylophone.release.xcconfig"; sourceTree = "<group>"; };
+		9A63B5BCEE07370DCB8DDF3B /* Pods-Xylophone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xylophone.debug.xcconfig"; path = "Target Support Files/Pods-Xylophone/Pods-Xylophone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +59,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734D60898F081EFD444BA805 /* Pods_Xylophone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44B7570DF47A98691050CCA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A63B5BCEE07370DCB8DDF3B /* Pods-Xylophone.debug.xcconfig */,
+				6019D872FC8F6DAEA2AF5978 /* Pods-Xylophone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		49B5979E25940D6600300565 = {
 			isa = PBXGroup;
 			children = (
 				49B597A925940D6600300565 /* Xylophone */,
 				49B597A825940D6600300565 /* Products */,
+				F1DF90BBEDFC98330BA5406C /* Frameworks */,
+				44B7570DF47A98691050CCA9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +126,7 @@
 				49B597D725941D8A00300565 /* GameOverViewController.swift */,
 				49B597E025942E0500300565 /* MenuViewController.swift */,
 				49B597E42594342700300565 /* HighScoreViewController.swift */,
+				4966E0D0259C0676002E0C88 /* GameOptionsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -132,6 +152,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F1DF90BBEDFC98330BA5406C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B9989F2061BAEF63FF9F74D /* Pods_Xylophone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49B597BB25940D6700300565 /* Build configuration list for PBXNativeTarget "Xylophone" */;
 			buildPhases = (
+				075CB3AD456C59F5FC2C5938 /* [CP] Check Pods Manifest.lock */,
 				49B597A325940D6600300565 /* Sources */,
 				49B597A425940D6600300565 /* Frameworks */,
 				49B597A525940D6600300565 /* Resources */,
+				D1233CDC57C3A43169F0120C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +234,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		075CB3AD456C59F5FC2C5938 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xylophone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1233CDC57C3A43169F0120C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xylophone/Pods-Xylophone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Xylophone/Pods-Xylophone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xylophone/Pods-Xylophone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49B597A325940D6600300565 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -216,6 +288,7 @@
 				49B597AB25940D6600300565 /* AppDelegate.swift in Sources */,
 				49B597AD25940D6600300565 /* SceneDelegate.swift in Sources */,
 				49B597E52594342700300565 /* HighScoreViewController.swift in Sources */,
+				4966E0D1259C0676002E0C88 /* GameOptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +432,7 @@
 		};
 		49B597BC25940D6700300565 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A63B5BCEE07370DCB8DDF3B /* Pods-Xylophone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,6 +452,7 @@
 		};
 		49B597BD25940D6700300565 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6019D872FC8F6DAEA2AF5978 /* Pods-Xylophone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
