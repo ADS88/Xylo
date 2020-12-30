@@ -6,19 +6,24 @@
 //
 
 import UIKit
+import CoreData
 
 class HighScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        // Do any additional setup after loading the view.
     }
     
     func getData(){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request: NSFetchRequest = HighScore.fetchRequest()
+        request.fetchLimit = 3
+        let sortDescriptor = NSSortDescriptor(key: "score", ascending: false)
+        let sortDescriptors = [sortDescriptor]
+        request.sortDescriptors = sortDescriptors
         do {
-            let scores: [HighScore] = try context.fetch(HighScore.fetchRequest())
+            let scores: [HighScore] = try context.fetch(request)
             for score in scores {
                 print(score.score)
             }
