@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +13,7 @@
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Game View Controller" customClass="GameViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Game View Controller" customClass="GameViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +153,7 @@
         <!--Game Over View Controller-->
         <scene sceneID="1Ke-UM-JVR">
             <objects>
-                <viewController id="aiR-7Q-S6h" customClass="GameOverViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aiR-7Q-S6h" customClass="GameOverViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKM-Rn-Lbv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,59 +227,59 @@
         <!--Menu View Controller-->
         <scene sceneID="cBK-1D-k0R">
             <objects>
-                <viewController id="E9b-5O-xJQ" userLabel="Menu View Controller" customClass="MenuViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E9b-5O-xJQ" userLabel="Menu View Controller" customClass="MenuViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I3b-44-1Mu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syG-Rh-cUr">
-                                <rect key="frame" x="10" y="248" width="394" height="400"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="BsP-aT-tCC">
+                                <rect key="frame" x="128.5" y="414" width="157" height="202"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEf-x1-Xi9">
-                                        <rect key="frame" x="40" y="20" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="VRN-am-7LL">
-                                        <rect key="frame" x="20" y="187" width="300" height="166"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reK-yg-kDL">
-                                                <rect key="frame" x="135" y="0.0" width="30" height="30"/>
-                                                <state key="normal" title="Play"/>
-                                                <connections>
-                                                    <action selector="playButtonClicked:" destination="F5P-SZ-D5V" eventType="touchUpInside" id="j1P-Fd-FAZ"/>
-                                                    <action selector="playButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="q77-AC-24A"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-lc-m9r">
-                                                <rect key="frame" x="108" y="68" width="84" height="30"/>
-                                                <state key="normal" title="High Scores"/>
-                                                <connections>
-                                                    <action selector="highScoreButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="8kA-lU-aNC"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaY-SI-MFN">
-                                                <rect key="frame" x="132" y="136" width="36" height="30"/>
-                                                <state key="normal" title="Shop"/>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="Gda-Tb-3OH"/>
-                                        </constraints>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reK-yg-kDL">
+                                        <rect key="frame" x="51" y="0.0" width="55" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Play">
+                                            <color key="titleColor" name="xyloBlue"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playButtonClicked:" destination="F5P-SZ-D5V" eventType="touchUpInside" id="j1P-Fd-FAZ"/>
+                                            <action selector="playButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="q77-AC-24A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-lc-m9r">
+                                        <rect key="frame" x="0.0" y="77" width="157" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="High Scores">
+                                            <color key="titleColor" name="xyloBlue"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="highScoreButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="8kA-lU-aNC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaY-SI-MFN">
+                                        <rect key="frame" x="44.5" y="154" width="68" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Shop">
+                                            <color key="titleColor" name="xyloBlue"/>
+                                        </state>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xylologo" translatesAutoresizingMaskIntoConstraints="NO" id="aEf-x1-Xi9">
+                                <rect key="frame" x="57" y="94" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="BVa-tp-ncF"/>
+                                    <constraint firstAttribute="height" constant="300" id="GHP-gC-rEg"/>
+                                    <constraint firstAttribute="width" constant="300" id="gDl-Ig-uEf"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uII-R4-i9e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="syG-Rh-cUr" firstAttribute="leading" secondItem="uII-R4-i9e" secondAttribute="leading" constant="10" id="KvV-hJ-S1M"/>
-                            <constraint firstItem="uII-R4-i9e" firstAttribute="trailing" secondItem="syG-Rh-cUr" secondAttribute="trailing" constant="10" id="Lm7-TG-CJf"/>
-                            <constraint firstItem="syG-Rh-cUr" firstAttribute="centerX" secondItem="I3b-44-1Mu" secondAttribute="centerX" id="PRw-wN-5KV"/>
-                            <constraint firstItem="syG-Rh-cUr" firstAttribute="centerY" secondItem="I3b-44-1Mu" secondAttribute="centerY" id="mqD-3D-oYg"/>
+                            <constraint firstItem="BsP-aT-tCC" firstAttribute="centerX" secondItem="I3b-44-1Mu" secondAttribute="centerX" id="7XQ-pu-fEQ"/>
+                            <constraint firstItem="aEf-x1-Xi9" firstAttribute="top" secondItem="uII-R4-i9e" secondAttribute="top" constant="50" id="S9n-uK-NN1"/>
+                            <constraint firstItem="aEf-x1-Xi9" firstAttribute="centerX" secondItem="I3b-44-1Mu" secondAttribute="centerX" id="fSr-HL-whz"/>
+                            <constraint firstItem="BsP-aT-tCC" firstAttribute="top" secondItem="aEf-x1-Xi9" secondAttribute="bottom" constant="20" id="idD-YO-dfr"/>
                         </constraints>
                     </view>
                     <connections>
@@ -294,18 +295,25 @@
         <!--Game Options View Controller-->
         <scene sceneID="c8e-bs-Bkw">
             <objects>
-                <viewController id="755-k2-c9Y" userLabel="Game Options View Controller" customClass="GameOptionsViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="755-k2-c9Y" userLabel="Game Options View Controller" customClass="GameOptionsViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4gZ-DM-RCM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxG-D4-Jo1">
-                                <rect key="frame" x="190" y="812" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
+                                <rect key="frame" x="171" y="788" width="72" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" name="xyloBlue"/>
+                                </state>
                                 <connections>
                                     <action selector="startButtonClicked:" destination="755-k2-c9Y" eventType="touchUpInside" id="c5f-OB-bxE"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="music" translatesAutoresizingMaskIntoConstraints="NO" id="w8C-Bz-d0h">
+                                <rect key="frame" x="106" y="209" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0JF-53-RpL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -325,7 +333,7 @@
         <!--High Score View Controller-->
         <scene sceneID="aht-nz-CqX">
             <objects>
-                <viewController id="rQd-2B-ipT" userLabel="High Score View Controller" customClass="HighScoreViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rQd-2B-ipT" userLabel="High Score View Controller" customClass="HighScoreViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tQR-pV-NA9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -355,6 +363,11 @@
         <segue reference="RcG-Yo-KEI"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="music" width="128" height="128"/>
+        <image name="xylologo" width="341" height="341"/>
+        <namedColor name="xyloBlue">
+            <color red="0.31372549019607843" green="0.70196078431372544" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

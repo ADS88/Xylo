@@ -34,7 +34,7 @@
 		4966E0D0259C0676002E0C88 /* GameOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsViewController.swift; sourceTree = "<group>"; };
 		4966E0DD259C123D002E0C88 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		4966E0E5259C17CF002E0C88 /* GameModeOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeOptions.swift; sourceTree = "<group>"; };
-		49B597A725940D6600300565 /* Xylophone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xylophone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49B597A725940D6600300565 /* Xylo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xylo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B597AA25940D6600300565 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B597AC25940D6600300565 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		49B597AE25940D6600300565 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		49B597A825940D6600300565 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49B597A725940D6600300565 /* Xylophone.app */,
+				49B597A725940D6600300565 /* Xylo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 			);
 			name = Xylophone;
 			productName = Xylophone;
-			productReference = 49B597A725940D6600300565 /* Xylophone.app */;
+			productReference = 49B597A725940D6600300565 /* Xylo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -451,7 +451,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewsturman.Xylophone;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Xylo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -471,7 +471,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewsturman.Xylophone;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Xylo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
