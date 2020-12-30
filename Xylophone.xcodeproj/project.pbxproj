@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4966E0D1259C0676002E0C88 /* GameOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966E0D0259C0676002E0C88 /* GameOptionsViewController.swift */; };
+		4966E0DE259C123D002E0C88 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966E0DD259C123D002E0C88 /* GameMode.swift */; };
+		4966E0E6259C17CF002E0C88 /* GameModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966E0E5259C17CF002E0C88 /* GameModeOptions.swift */; };
 		49B597AB25940D6600300565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597AA25940D6600300565 /* AppDelegate.swift */; };
 		49B597AD25940D6600300565 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597AC25940D6600300565 /* SceneDelegate.swift */; };
-		49B597AF25940D6600300565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597AE25940D6600300565 /* ViewController.swift */; };
+		49B597AF25940D6600300565 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597AE25940D6600300565 /* GameViewController.swift */; };
 		49B597B225940D6600300565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B597B025940D6600300565 /* Main.storyboard */; };
 		49B597B425940D6700300565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B597B325940D6700300565 /* Assets.xcassets */; };
 		49B597B725940D6700300565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B597B525940D6700300565 /* LaunchScreen.storyboard */; };
@@ -30,10 +32,12 @@
 
 /* Begin PBXFileReference section */
 		4966E0D0259C0676002E0C88 /* GameOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsViewController.swift; sourceTree = "<group>"; };
+		4966E0DD259C123D002E0C88 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		4966E0E5259C17CF002E0C88 /* GameModeOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeOptions.swift; sourceTree = "<group>"; };
 		49B597A725940D6600300565 /* Xylophone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xylophone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B597AA25940D6600300565 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B597AC25940D6600300565 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		49B597AE25940D6600300565 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49B597AE25940D6600300565 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		49B597B125940D6600300565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49B597B325940D6700300565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49B597B625940D6700300565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,7 +76,6 @@
 				9A63B5BCEE07370DCB8DDF3B /* Pods-Xylophone.debug.xcconfig */,
 				6019D872FC8F6DAEA2AF5978 /* Pods-Xylophone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -122,7 +125,7 @@
 		49B597C2259416B100300565 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				49B597AE25940D6600300565 /* ViewController.swift */,
+				49B597AE25940D6600300565 /* GameViewController.swift */,
 				49B597D725941D8A00300565 /* GameOverViewController.swift */,
 				49B597E025942E0500300565 /* MenuViewController.swift */,
 				49B597E42594342700300565 /* HighScoreViewController.swift */,
@@ -148,6 +151,8 @@
 		49B99D7825946613005E15B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4966E0DD259C123D002E0C88 /* GameMode.swift */,
+				4966E0E5259C17CF002E0C88 /* GameModeOptions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,10 +289,12 @@
 				49B597D825941D8A00300565 /* GameOverViewController.swift in Sources */,
 				49B597E125942E0500300565 /* MenuViewController.swift in Sources */,
 				49B99D7E25946999005E15B6 /* Xylophone.xcdatamodeld in Sources */,
-				49B597AF25940D6600300565 /* ViewController.swift in Sources */,
+				4966E0E6259C17CF002E0C88 /* GameModeOptions.swift in Sources */,
+				49B597AF25940D6600300565 /* GameViewController.swift in Sources */,
 				49B597AB25940D6600300565 /* AppDelegate.swift in Sources */,
 				49B597AD25940D6600300565 /* SceneDelegate.swift in Sources */,
 				49B597E52594342700300565 /* HighScoreViewController.swift in Sources */,
+				4966E0DE259C123D002E0C88 /* GameMode.swift in Sources */,
 				4966E0D1259C0676002E0C88 /* GameOptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import CoreData
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
 
     @IBOutlet weak var cButton: UIButton!
     @IBOutlet weak var dButton: UIButton!
@@ -28,8 +28,9 @@ class ViewController: UIViewController {
     var buttons = [UIButton]()
     var soundToButton = [String:UIButton]()
     var leastKeysPlayed = 1
-    var mostKeysPlayed = 3
+    var mostKeysPlayed = 2
     var score: Int64 = 0
+    var gameMode: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +104,9 @@ class ViewController: UIViewController {
         for key in keys{
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 self.playSound(soundName: key)
-                self.buttonOpaqueOnClickEffect(button: self.soundToButton[key]! ,newOpacity: 0.0)
+                if self.gameMode == GameMode.MEMORY.rawValue {
+                    self.buttonOpaqueOnClickEffect(button: self.soundToButton[key]! ,newOpacity: 0.0)
+                }
             }
             delay += 1
         }

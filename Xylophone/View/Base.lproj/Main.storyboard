@@ -12,7 +12,7 @@
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Game View Controller" customClass="ViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Game View Controller" customClass="GameViewController" customModule="Xylophone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,14 +299,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxG-D4-Jo1">
-                                <rect key="frame" x="192" y="668" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxG-D4-Jo1">
+                                <rect key="frame" x="190" y="812" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonClicked:" destination="755-k2-c9Y" eventType="touchUpInside" id="c5f-OB-bxE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0JF-53-RpL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TxG-D4-Jo1" firstAttribute="centerX" secondItem="4gZ-DM-RCM" secondAttribute="centerX" id="X3Z-y7-w1D"/>
+                            <constraint firstItem="0JF-53-RpL" firstAttribute="bottom" secondItem="TxG-D4-Jo1" secondAttribute="bottom" constant="20" id="tlr-ez-U6X"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToGame" modalPresentationStyle="fullScreen" id="RcG-Yo-KEI"/>

@@ -1,0 +1,3 @@
+enum GameMode: Int {
+    case MEMORY = 0, PITCH_IDENTIFICATION, CHORD_IDENTIFICATION
+}
