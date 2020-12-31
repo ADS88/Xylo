@@ -10,20 +10,26 @@ import CoreData
 
 class HighScoreViewController: UIViewController {
 
+    @IBOutlet weak var highScoreTableView: UITableView!
+    
+    var scores = [HighScore]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
+        highScoreTableView.delegate = self
+        highScoreTableView.dataSource = self
     }
     
     func getData(){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request: NSFetchRequest = HighScore.fetchRequest()
-        request.fetchLimit = 3
+        request.fetchLimit = 10
         let sortDescriptor = NSSortDescriptor(key: "score", ascending: false)
         let sortDescriptors = [sortDescriptor]
         request.sortDescriptors = sortDescriptors
         do {
-            let scores: [HighScore] = try context.fetch(request)
+            scores = try context.fetch(request)
             for score in scores {
                 print(score.score)
             }
@@ -43,4 +49,20 @@ class HighScoreViewController: UIViewController {
     }
     */
 
+}
+
+extension HighScoreViewController: UITableViewDelegate {
+    
+}
+
+extension HighScoreViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = String(scores[indexPath.row].score)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int ) -> Int {
+        return scores.count
+    }
 }

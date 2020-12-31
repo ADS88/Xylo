@@ -141,6 +141,7 @@ class GameViewController: UIViewController {
         if segue.identifier == "goToGameOver"{
             let destinationVC = segue.destination as! GameOverViewController
             destinationVC.score = score
+            destinationVC.gameMode = gameMode
         }
     }
 
