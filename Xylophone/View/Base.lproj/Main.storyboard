@@ -159,33 +159,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="PB0-Qh-cOC">
-                                <rect key="frame" x="107" y="361" width="200" height="174.5"/>
+                                <rect key="frame" x="107" y="350.5" width="200" height="195"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="14T-QL-sSF">
-                                        <rect key="frame" x="14.5" y="0.0" width="171.5" height="78.5"/>
+                                        <rect key="frame" x="2.5" y="0.0" width="195.5" height="87"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00o-8E-CEU">
-                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="42"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="195.5" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HbY-h7-as4">
-                                                <rect key="frame" x="51.5" y="51" width="68.5" height="27.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <rect key="frame" x="60.5" y="57" width="74" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="5ME-oL-xgs">
-                                        <rect key="frame" x="0.0" y="95.5" width="200" height="79"/>
+                                        <rect key="frame" x="0.0" y="104" width="200" height="91"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HW3-w9-ZU4">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="VNi-Ic-9m7"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Play again">
                                                     <color key="titleColor" name="xyloBlue"/>
                                                 </state>
@@ -194,10 +195,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVW-vP-asJ">
-                                                <rect key="frame" x="0.0" y="49" width="200" height="30"/>
+                                                <rect key="frame" x="0.0" y="55" width="200" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="cWM-lt-sa6"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Main menu">
                                                     <color key="titleColor" name="xyloBlue"/>
                                                 </state>
