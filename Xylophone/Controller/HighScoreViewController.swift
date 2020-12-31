@@ -17,6 +17,8 @@ class HighScoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
+        let nib = UINib(nibName: "HighScoreTableViewCell", bundle: nil )
+        highScoreTableView.register(nib, forCellReuseIdentifier: "HighScoreTableViewCell")
         highScoreTableView.delegate = self
         highScoreTableView.dataSource = self
     }
@@ -57,8 +59,24 @@ extension HighScoreViewController: UITableViewDelegate {
 
 extension HighScoreViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(scores[indexPath.row].score)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreTableViewCell", for: indexPath) as! HighScoreTableViewCell
+        cell.nameLabel.text = scores[indexPath.row].name
+        cell.scoreLabel.text = String(scores[indexPath.row].score)
+        for constraint in cell.surroundingBlockView.constraints {
+            print(constraint.identifier)
+            if constraint.identifier == "distanceFromRight" {
+                print("yowza")
+                constraint.constant = constraint.constant + CGFloat(10 * indexPath.row)
+            }
+        }
+        
+        if indexPath.row % 3 == 0 {
+            cell.surroundingBlockView.backgroundColor = UIColor(named: "xyloBlue")
+        } else if indexPath.row % 3 == 1 {
+            cell.surroundingBlockView.backgroundColor = UIColor(named: "xyloOrange")
+        }
+        
+        cell.layoutIfNeeded()
         return cell
     }
     
