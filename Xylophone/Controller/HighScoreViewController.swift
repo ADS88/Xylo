@@ -60,10 +60,11 @@ extension HighScoreViewController: UITableViewDataSource {
         cell.nameLabel.text = scores[indexPath.row].name
         cell.scoreLabel.text = String(scores[indexPath.row].score)
         
-        if indexPath.row % 3 == 0 {
+        if indexPath.row % 2 == 0 {
             cell.surroundingBlockView.backgroundColor = UIColor(named: "xyloBlue")
-        } else if indexPath.row % 3 == 1 {
-            cell.surroundingBlockView.backgroundColor = UIColor(named: "xyloOrange")
+        } else {
+            cell.nameLabel.textColor = UIColor(named: "xyloBlue")
+            cell.scoreLabel.textColor = UIColor(named: "xyloBlue")
         }
         
         cell.layoutIfNeeded()

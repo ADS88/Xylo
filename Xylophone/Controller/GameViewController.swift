@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var keyGenerationStrategy = SongKeyGenerationStrategy()
     var player: AVAudioPlayer?
     let sounds = ["C", "D", "E", "F", "G", "A", "B"]
     var expectedSounds = [String]()
@@ -84,19 +85,10 @@ class GameViewController: UIViewController {
     func newSetOfKeys(){
         currentIndex = 0
         setKeysClickable(to: false)
-        expectedSounds = generateKeys()
+        expectedSounds = keyGenerationStrategy.generateKeys(sounds: sounds, leastKeysPlayed: leastKeysPlayed, mostKeysPlayed: mostKeysPlayed)
         playKeys(expectedSounds)
         leastKeysPlayed += 1
         mostKeysPlayed += 1
-    }
-    
-    func generateKeys() -> [String] {
-        var items = [String]()
-        let numKeys = Int.random(in: leastKeysPlayed...mostKeysPlayed)
-        for _ in 0...numKeys{
-            items.append(sounds.randomElement()!)
-        }
-        return items
     }
     
     func playKeys(_ keys: [String]){
