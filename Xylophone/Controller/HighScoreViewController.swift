@@ -32,9 +32,6 @@ class HighScoreViewController: UIViewController {
         request.sortDescriptors = sortDescriptors
         do {
             scores = try context.fetch(request)
-            for score in scores {
-                print(score.score)
-            }
         } catch {
             print("error")
         }

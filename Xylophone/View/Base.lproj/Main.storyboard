@@ -398,7 +398,7 @@
         <!--Shop View Controller-->
         <scene sceneID="lDe-ZK-7ab">
             <objects>
-                <viewController id="HO1-tQ-r6a" userLabel="Shop View Controller" sceneMemberID="viewController">
+                <viewController id="HO1-tQ-r6a" userLabel="Shop View Controller" customClass="ShopViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="da8-ar-ydp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        preloadDataIfNotExists()
         return true
     }
 
@@ -33,6 +34,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // MARK: - Core Data stack
+    
+    private func preloadDataIfNotExists(){
+        let preloadedDataKey = "didPreloadData"
+        let userDefaults = UserDefaults.standard
+        if userDefaults.bool(forKey: preloadedDataKey) == false {
+            preloadData(key: preloadedDataKey, userDefaults: userDefaults)
+        }
+    }
+    
+    private func preloadData(key preloadedDataKey: String, userDefaults: UserDefaults){
+        guard let urlPath = Bundle.main.url(forResource: "preloadeddata", withExtension: ".plist") else { return }
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let contents = NSDictionary(contentsOf: urlPath) as! [String: Int]
+            do {
+                for (name, cost) in contents {
+                    let shopItem = ShopItem(context: backgroundContext)
+                    shopItem.name = name
+                    shopItem.cost = Int64(cost)
+                    shopItem.hasBeenPurchased = false
+                }
+                let defaultKeyboard = ShopItem(context: backgroundContext)
+                defaultKeyboard.name = "Standard keyboard"
+                defaultKeyboard.cost = 0
+                defaultKeyboard.hasBeenPurchased = true
+                try backgroundContext.save()
+                userDefaults.setValue(true, forKey: preloadedDataKey)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        
+    }
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*
