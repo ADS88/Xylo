@@ -35,31 +35,17 @@ class GameOptionsViewController: UIViewController, iCarouselDataSource {
     
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width / 1.2, height: self.view.frame.size.height / 1.4))
-        view.layer.cornerRadius = 20;
-        view.layer.masksToBounds = true;
+        
+        let view = GameModeOptionView()
+        view.layer.cornerRadius = 20
+        view.frame.size = CGSize(width: self.view.frame.size.width/1.2, height: self.view.frame.size.height / 1.4)
         view.backgroundColor = gameModes[index].color
-        
+
         let image = UIImage(systemName: gameModes[index].imageName)
-        let imageView = UIImageView(image: image)
-        imageView.tintColor = .white
-        imageView.frame = CGRect(x: 50, y: 100, width: 200, height: 200)
-        view.addSubview(imageView)
-        
-        let titleLabel = UILabel()
-        titleLabel.text = gameModes[index].title
-        titleLabel.textColor = .white
-        titleLabel.textAlignment = .center
-        titleLabel.font = titleLabel.font.withSize(30)
-        titleLabel.frame = CGRect(x: 0, y: 300, width: view.frame.size.width, height: 100)
-        view.addSubview(titleLabel)
-        
-        let descriptionLabel = UILabel()
-        descriptionLabel.textColor = .white
-        descriptionLabel.numberOfLines = 0
-        descriptionLabel.text = gameModes[index].description
-        descriptionLabel.frame = CGRect(x: 20, y: 350, width: view.frame.size.width - 40, height: 150)
-        view.addSubview(descriptionLabel)
+        view.optionImage.image = image
+        view.optionTitle.text = gameModes[index].title
+        view.optionDescription.text = gameModes[index].description
+       
         
         return view
     }
