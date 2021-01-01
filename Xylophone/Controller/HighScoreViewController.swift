@@ -62,13 +62,6 @@ extension HighScoreViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreTableViewCell", for: indexPath) as! HighScoreTableViewCell
         cell.nameLabel.text = scores[indexPath.row].name
         cell.scoreLabel.text = String(scores[indexPath.row].score)
-        for constraint in cell.surroundingBlockView.constraints {
-            print(constraint.identifier)
-            if constraint.identifier == "distanceFromRight" {
-                print("yowza")
-                constraint.constant = constraint.constant + CGFloat(10 * indexPath.row)
-            }
-        }
         
         if indexPath.row % 3 == 0 {
             cell.surroundingBlockView.backgroundColor = UIColor(named: "xyloBlue")

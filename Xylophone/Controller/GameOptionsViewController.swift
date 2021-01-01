@@ -15,18 +15,13 @@ class GameOptionsViewController: UIViewController, iCarouselDataSource {
                      GameModeOption(title: "Chord detection", description: "Notes will be played without visual indication. Tap the correct notes back to gain points. The amount of notes to remember increases over time", color: UIColor(named: "xyloOrange") ?? .orange, imageName: "music.note.list")
     ]
     
-    let carousel: iCarousel = {
-        let view = iCarousel()
-        view.type = .rotary
-        return view
-    }()
+    @IBOutlet weak var carousel: iCarousel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(carousel)
+        carousel.type = .rotary
         carousel.dataSource = self
-        carousel.frame = CGRect(x: 0, y: 100, width: view.frame.size.width, height: 400)
-
         // Do any additional setup after loading the view.
     }
     
@@ -40,7 +35,7 @@ class GameOptionsViewController: UIViewController, iCarouselDataSource {
     
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width / 1.2, height: 500))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width / 1.2, height: self.view.frame.size.height / 1.4))
         view.layer.cornerRadius = 20;
         view.layer.masksToBounds = true;
         view.backgroundColor = gameModes[index].color

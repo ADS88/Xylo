@@ -335,15 +335,24 @@
                                     <action selector="startButtonClicked:" destination="755-k2-c9Y" eventType="touchUpInside" id="c5f-OB-bxE"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Doj-HI-5xq" customClass="iCarousel">
+                                <rect key="frame" x="20" y="44" width="374" height="744"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0JF-53-RpL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="TxG-D4-Jo1" firstAttribute="top" secondItem="Doj-HI-5xq" secondAttribute="bottom" id="43P-nu-kz9"/>
+                            <constraint firstItem="Doj-HI-5xq" firstAttribute="leading" secondItem="0JF-53-RpL" secondAttribute="leading" constant="20" id="P2O-Jt-1yw"/>
+                            <constraint firstItem="0JF-53-RpL" firstAttribute="trailing" secondItem="Doj-HI-5xq" secondAttribute="trailing" constant="20" id="VkW-8a-b6k"/>
                             <constraint firstItem="TxG-D4-Jo1" firstAttribute="centerX" secondItem="4gZ-DM-RCM" secondAttribute="centerX" id="X3Z-y7-w1D"/>
+                            <constraint firstItem="Doj-HI-5xq" firstAttribute="top" secondItem="0JF-53-RpL" secondAttribute="top" id="mxF-nM-he3"/>
                             <constraint firstItem="0JF-53-RpL" firstAttribute="bottom" secondItem="TxG-D4-Jo1" secondAttribute="bottom" constant="20" id="tlr-ez-U6X"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="carousel" destination="Doj-HI-5xq" id="Mma-7E-PtE"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToGame" modalPresentationStyle="fullScreen" id="RcG-Yo-KEI"/>
                     </connections>
                 </viewController>
