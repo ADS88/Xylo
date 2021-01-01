@@ -238,81 +238,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="BsP-aT-tCC">
-                                <rect key="frame" x="67" y="414" width="280" height="202"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-hb-Bnd">
+                                <rect key="frame" x="40" y="64" width="334" height="778"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reK-yg-kDL">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="48"/>
-                                        <color key="backgroundColor" name="xyloBlue"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                        <state key="normal" title="Play">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="playButtonClicked:" destination="F5P-SZ-D5V" eventType="touchUpInside" id="j1P-Fd-FAZ"/>
-                                            <action selector="playButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="q77-AC-24A"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-lc-m9r">
-                                        <rect key="frame" x="0.0" y="77" width="280" height="48"/>
-                                        <color key="backgroundColor" name="xyloBlue"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="Jnq-Lf-wRh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                        <state key="normal" title="High Scores">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="highScoreButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="8kA-lU-aNC"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaY-SI-MFN">
-                                        <rect key="frame" x="0.0" y="154" width="280" height="48"/>
-                                        <color key="backgroundColor" name="xyloBlue"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                        <state key="normal" title="Shop">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xylologo" translatesAutoresizingMaskIntoConstraints="NO" id="aEf-x1-Xi9">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="487"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BsP-aT-tCC">
+                                        <rect key="frame" x="0.0" y="487" width="334" height="291"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reK-yg-kDL">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="77"/>
+                                                <color key="backgroundColor" name="xyloBlue"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <state key="normal" title="Play">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="playButtonClicked:" destination="F5P-SZ-D5V" eventType="touchUpInside" id="j1P-Fd-FAZ"/>
+                                                    <action selector="playButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="q77-AC-24A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-lc-m9r">
+                                                <rect key="frame" x="0.0" y="107" width="334" height="77"/>
+                                                <color key="backgroundColor" name="xyloBlue"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <state key="normal" title="High Scores">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="highScoreButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="8kA-lU-aNC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaY-SI-MFN">
+                                                <rect key="frame" x="0.0" y="214" width="334" height="77"/>
+                                                <color key="backgroundColor" name="xyloBlue"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <state key="normal" title="Shop">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="OaY-SI-MFN" firstAttribute="leading" secondItem="BsP-aT-tCC" secondAttribute="leading" id="Bys-za-fkX"/>
-                                    <constraint firstItem="reK-yg-kDL" firstAttribute="leading" secondItem="BsP-aT-tCC" secondAttribute="leading" id="UI0-UV-BFp"/>
-                                    <constraint firstAttribute="trailing" secondItem="OaY-SI-MFN" secondAttribute="trailing" id="amh-al-wla"/>
-                                    <constraint firstAttribute="trailing" secondItem="reK-yg-kDL" secondAttribute="trailing" id="iJ9-lx-2Wr"/>
-                                </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xylologo" translatesAutoresizingMaskIntoConstraints="NO" id="aEf-x1-Xi9">
-                                <rect key="frame" x="57" y="94" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="GHP-gC-rEg"/>
-                                    <constraint firstAttribute="width" constant="300" id="gDl-Ig-uEf"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uII-R4-i9e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BsP-aT-tCC" firstAttribute="centerX" secondItem="I3b-44-1Mu" secondAttribute="centerX" id="7XQ-pu-fEQ"/>
-                            <constraint firstItem="aEf-x1-Xi9" firstAttribute="top" secondItem="uII-R4-i9e" secondAttribute="top" constant="50" id="S9n-uK-NN1"/>
-                            <constraint firstItem="aEf-x1-Xi9" firstAttribute="centerX" secondItem="I3b-44-1Mu" secondAttribute="centerX" id="fSr-HL-whz"/>
-                            <constraint firstItem="BsP-aT-tCC" firstAttribute="top" secondItem="aEf-x1-Xi9" secondAttribute="bottom" constant="20" id="idD-YO-dfr"/>
+                            <constraint firstItem="4Rd-hb-Bnd" firstAttribute="leading" secondItem="uII-R4-i9e" secondAttribute="leading" constant="40" id="BUG-h1-Mtf"/>
+                            <constraint firstItem="uII-R4-i9e" firstAttribute="trailing" secondItem="4Rd-hb-Bnd" secondAttribute="trailing" constant="40" id="L9N-bE-uPU"/>
+                            <constraint firstItem="4Rd-hb-Bnd" firstAttribute="top" secondItem="uII-R4-i9e" secondAttribute="top" constant="20" id="pHT-Ls-RPL"/>
+                            <constraint firstItem="uII-R4-i9e" firstAttribute="bottom" secondItem="4Rd-hb-Bnd" secondAttribute="bottom" constant="20" id="vSo-Xx-uzd"/>
                         </constraints>
                     </view>
                     <connections>
