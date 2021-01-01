@@ -17,6 +17,9 @@ class MenuViewController: UIViewController {
         self.performSegue(withIdentifier: "goToHighScore", sender: self)
     }
     
+    @IBAction func shopButtonClicked(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToShop", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

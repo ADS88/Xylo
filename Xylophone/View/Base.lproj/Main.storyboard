@@ -292,6 +292,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="shopButtonClicked:" destination="E9b-5O-xJQ" eventType="touchUpInside" id="rep-Ug-lrR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -310,6 +313,7 @@
                     <connections>
                         <segue destination="rQd-2B-ipT" kind="show" identifier="goToHighScore" id="Wr7-aW-deI"/>
                         <segue destination="755-k2-c9Y" kind="presentation" identifier="goToGameOptions" modalPresentationStyle="fullScreen" id="RNb-E8-cB7"/>
+                        <segue destination="HO1-tQ-r6a" kind="presentation" identifier="goToShop" id="ZW8-lL-JYc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-Ri-sF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -391,9 +395,33 @@
             </objects>
             <point key="canvasLocation" x="-971" y="867"/>
         </scene>
+        <!--Shop View Controller-->
+        <scene sceneID="lDe-ZK-7ab">
+            <objects>
+                <viewController id="HO1-tQ-r6a" userLabel="Shop View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="da8-ar-ydp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svd-js-Ici">
+                                <rect key="frame" x="186" y="291" width="40" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lhf-yB-nBn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAw-BI-AbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91.304347826086968" y="857.8125"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gWA-Pk-PIj"/>
+        <segue reference="RcG-Yo-KEI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="xylologo" width="341" height="341"/>
