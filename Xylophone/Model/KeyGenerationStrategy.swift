@@ -8,5 +8,6 @@
 import Foundation
 
 protocol KeyGenerationStrategy {
-    func generateKeys(sounds: [String], leastKeysPlayed: Int, mostKeysPlayed: Int) -> [String]
+    mutating func generateKeys(sounds: [String], leastKeysPlayed: Int, mostKeysPlayed: Int) -> [String]
+    func shouldContinuePlaying() -> Bool
 }

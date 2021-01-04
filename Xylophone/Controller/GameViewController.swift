@@ -21,7 +21,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var keyGenerationStrategy = SongKeyGenerationStrategy()
+    var keyGenerationStrategy : KeyGenerationStrategy = SongKeyGenerationStrategy()
     var player: AVAudioPlayer?
     let sounds = ["C", "D", "E", "F", "G", "A", "B"]
     var expectedSounds = [String]()
@@ -46,7 +46,6 @@ class GameViewController: UIViewController {
             "B": bButton
         ]
         newSetOfKeys()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func keyPressed(_ sender: UIButton) {
@@ -58,12 +57,16 @@ class GameViewController: UIViewController {
             score += 1
             scoreLabel.text = "Score: \(score)"
         } else {
-            createHighScore()
-            self.performSegue(withIdentifier: "goToGameOver", sender: self)
+            gameOver()
         }
         if currentIndex >= expectedSounds.count {
             newSetOfKeys()
         }
+    }
+    
+    func gameOver(){
+        createHighScore()
+        self.performSegue(withIdentifier: "goToGameOver", sender: self)
     }
     
     func createHighScore(){
@@ -83,6 +86,9 @@ class GameViewController: UIViewController {
     }
     
     func newSetOfKeys(){
+        if (!keyGenerationStrategy.shouldContinuePlaying()) {
+            gameOver()
+        }
         currentIndex = 0
         setKeysClickable(to: false)
         expectedSounds = keyGenerationStrategy.generateKeys(sounds: sounds, leastKeysPlayed: leastKeysPlayed, mostKeysPlayed: mostKeysPlayed)
@@ -96,7 +102,7 @@ class GameViewController: UIViewController {
         for key in keys{
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 self.playSound(soundName: key)
-                if self.gameMode == GameMode.MEMORY.rawValue {
+                if self.gameMode != GameMode.PITCH_IDENTIFICATION.rawValue {
                     self.buttonOpaqueOnClickEffect(button: self.soundToButton[key]! ,newOpacity: 0.0)
                 }
             }

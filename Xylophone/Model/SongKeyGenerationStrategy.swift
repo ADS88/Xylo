@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct SongKeyGenerationStrategy {
+struct SongKeyGenerationStrategy : KeyGenerationStrategy {
     
     var currentIndex = 0
-    let song = ["A"]
+    let song = ["B", "A", "G", "A", "B", "B", "B", "A", "A", "A", "B", "B", "B", "B", "A", "G", "A", "B", "B", "B", "B", "A", "A", "B", "A", "G"]
     
     mutating func generateKeys(sounds: [String], leastKeysPlayed: Int, mostKeysPlayed: Int) -> [String] {
         var items = [String]()
@@ -23,5 +23,7 @@ struct SongKeyGenerationStrategy {
         return items
     }
     
-    
+    func shouldContinuePlaying() -> Bool {
+        return currentIndex < song.count
+    }
 }
