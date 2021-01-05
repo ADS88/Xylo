@@ -94,13 +94,12 @@ class GameOptionsViewController: UIViewController, iCarouselDataSource, iCarouse
 }
 
 
-extension GameOptionsViewController: UIPickerViewDelegate {
+extension GameOptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
          return songNames[row]
     }
-}
-
-extension GameOptionsViewController: UIPickerViewDataSource {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -108,5 +107,6 @@ extension GameOptionsViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return songNames.count
     }
+    
 }
 
