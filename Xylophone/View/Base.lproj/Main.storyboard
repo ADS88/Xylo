@@ -13,7 +13,7 @@
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Game View Controller" customClass="GameViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" id="BYZ-38-t0r" userLabel="Game View Controller" customClass="GameViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +143,6 @@
                         <outlet property="fButton" destination="Lbz-8t-kY4" id="V4n-vW-IBx"/>
                         <outlet property="gButton" destination="S8U-6z-YIv" id="6CR-gM-VHE"/>
                         <outlet property="scoreLabel" destination="MgA-lX-yLD" id="S1V-F5-KcM"/>
-                        <segue destination="aiR-7Q-S6h" kind="presentation" identifier="goToGameOver" modalPresentationStyle="fullScreen" id="LKK-LE-c8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,7 +152,7 @@
         <!--Game Over View Controller-->
         <scene sceneID="1Ke-UM-JVR">
             <objects>
-                <viewController id="aiR-7Q-S6h" customClass="GameOverViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameOverViewController" id="aiR-7Q-S6h" customClass="GameOverViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKM-Rn-Lbv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,8 +221,6 @@
                     <navigationItem key="navigationItem" id="gJp-6l-s0z"/>
                     <connections>
                         <outlet property="scoreText" destination="HbY-h7-as4" id="TUi-Ju-jRc"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="playAgain" modalPresentationStyle="fullScreen" id="gWA-Pk-PIj"/>
-                        <segue destination="E9b-5O-xJQ" kind="presentation" identifier="goToMenu" modalPresentationStyle="fullScreen" id="7bs-Zx-mps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lMz-8m-wa9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -310,11 +307,6 @@
                             <constraint firstItem="uII-R4-i9e" firstAttribute="bottom" secondItem="4Rd-hb-Bnd" secondAttribute="bottom" constant="20" id="vSo-Xx-uzd"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="rQd-2B-ipT" kind="show" identifier="goToHighScore" id="Wr7-aW-deI"/>
-                        <segue destination="755-k2-c9Y" kind="presentation" identifier="goToGameOptions" modalPresentationStyle="fullScreen" id="RNb-E8-cB7"/>
-                        <segue destination="HO1-tQ-r6a" kind="presentation" identifier="goToShop" id="ZW8-lL-JYc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-Ri-sF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="F5P-SZ-D5V" userLabel="Exit" sceneMemberID="exit"/>
@@ -356,7 +348,6 @@
                     <connections>
                         <outlet property="carousel" destination="Doj-HI-5xq" id="Mma-7E-PtE"/>
                         <outlet property="songPickerView" destination="KJU-ou-qHp" id="WHu-ge-m4f"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToGame" modalPresentationStyle="fullScreen" id="RcG-Yo-KEI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnC-wy-dmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -366,13 +357,13 @@
         <!--High Score View Controller-->
         <scene sceneID="aht-nz-CqX">
             <objects>
-                <viewController id="rQd-2B-ipT" userLabel="High Score View Controller" customClass="HighScoreViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HighScoreViewController" id="rQd-2B-ipT" userLabel="High Score View Controller" customClass="HighScoreViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tQR-pV-NA9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0K6-sU-9wc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -397,9 +388,9 @@
         <!--Shop View Controller-->
         <scene sceneID="lDe-ZK-7ab">
             <objects>
-                <viewController id="HO1-tQ-r6a" userLabel="Shop View Controller" customClass="ShopViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShopViewController" id="HO1-tQ-r6a" userLabel="Shop View Controller" customClass="ShopViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="da8-ar-ydp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svd-js-Ici">
@@ -419,9 +410,6 @@
             <point key="canvasLocation" x="-91.304347826086968" y="857.8125"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="RcG-Yo-KEI"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="xylologo" width="341" height="341"/>
         <namedColor name="xyloBlue">

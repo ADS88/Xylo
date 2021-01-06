@@ -14,25 +14,18 @@ class GameOverViewController: UIViewController, Storyboarded {
     @IBOutlet weak var scoreText: UILabel!
     var score: Int64 = 0
     var gameMode = 0
+    var keyGenerationStrategy : KeyGenerationStrategy = RandomKeyGenerationStrategy()
     
     @IBAction func playAgainPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "playAgain", sender: self)
+        coordinator?.playGame(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy)
     }
     
     @IBAction func goToMenuPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToMenu", sender: self)
+        coordinator?.mainMenu()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scoreText.text = "Score: \(score)"
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "playAgain"{
-            let destinationVC = segue.destination as! GameViewController
-            destinationVC.gameMode = gameMode
-        }
-    }
-    
 }

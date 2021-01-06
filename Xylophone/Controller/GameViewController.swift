@@ -67,8 +67,7 @@ class GameViewController: UIViewController, Storyboarded {
     }
     
     func gameOver(){
-        createHighScore()
-        self.performSegue(withIdentifier: "goToGameOver", sender: self)
+        coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score)
     }
     
     func createHighScore(){

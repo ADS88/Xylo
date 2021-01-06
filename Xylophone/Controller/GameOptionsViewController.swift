@@ -32,7 +32,13 @@ class GameOptionsViewController: UIViewController, iCarouselDataSource, iCarouse
     
     @objc
     func startGame(){
-        self.performSegue(withIdentifier: "goToGame", sender: self)
+        let keyGenerationStrategy: KeyGenerationStrategy
+        if carousel.currentItemIndex == GameMode.SONG.rawValue {
+            keyGenerationStrategy = SongKeyGenerationStrategy()
+        } else {
+            keyGenerationStrategy = RandomKeyGenerationStrategy()
+        }
+        self.coordinator?.playGame(gameMode: carousel.currentItemIndex, keyGenerationStrategy: keyGenerationStrategy)
     }
     
     
@@ -79,19 +85,6 @@ class GameOptionsViewController: UIViewController, iCarouselDataSource, iCarouse
        
         
         return view
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToGame"{
-            
-            let destinationVC = segue.destination as! GameViewController
-            destinationVC.gameMode = carousel.currentItemIndex
-            if carousel.currentItemIndex == GameMode.SONG.rawValue {
-                destinationVC.keyGenerationStrategy = SongKeyGenerationStrategy()
-            } else {
-                destinationVC.keyGenerationStrategy = RandomKeyGenerationStrategy()
-            }
-        }
     }
 }
 

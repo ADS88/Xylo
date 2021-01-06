@@ -11,17 +11,17 @@ class MenuViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
 
+    
     @IBAction func playButtonClicked(_ sender: UIButton) {
-        print("hello")
         coordinator?.gameOptions()
     }
     
     @IBAction func highScoreButtonClicked(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToHighScore", sender: self)
+        coordinator?.highScores()
     }
     
     @IBAction func shopButtonClicked(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToShop", sender: self)
+        coordinator?.shop()
     }
     
     override func viewDidLoad() {

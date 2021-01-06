@@ -1,11 +1,3 @@
-//
-//  Storyboarded.swift
-//  Xylophone
-//
-//  Created by Andrew on 6/01/21.
-//
-
-import Foundation
 import UIKit
 
 protocol Storyboarded {
