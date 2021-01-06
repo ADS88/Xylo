@@ -9,7 +9,9 @@ import UIKit
 import AVFoundation
 import CoreData
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
 
     @IBOutlet weak var cButton: UIButton!
     @IBOutlet weak var dButton: UIButton!

@@ -7,10 +7,13 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
 
     @IBAction func playButtonClicked(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToGameOptions", sender: self)
+        print("hello")
+        coordinator?.gameOptions()
     }
     
     @IBAction func highScoreButtonClicked(_ sender: UIButton) {

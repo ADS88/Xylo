@@ -8,7 +8,9 @@
 import UIKit
 import CoreData
 
-class ShopViewController: UIViewController {
+class ShopViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
     
     override func viewDidLoad() {
         var shopItems = [ShopItem]()

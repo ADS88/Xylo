@@ -7,7 +7,9 @@
 
 import UIKit
 
-class GameOverViewController: UIViewController {
+class GameOverViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
 
     @IBOutlet weak var scoreText: UILabel!
     var score: Int64 = 0

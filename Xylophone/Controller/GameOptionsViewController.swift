@@ -8,7 +8,9 @@
 import UIKit
 import iCarousel
 
-class GameOptionsViewController: UIViewController, iCarouselDataSource, iCarouselDelegate {
+class GameOptionsViewController: UIViewController, iCarouselDataSource, iCarouselDelegate, Storyboarded {
+    
+    weak var coordinator: MainCoordinator?
     
     @IBOutlet weak var carousel: iCarousel!
     @IBOutlet weak var songPickerView: UIPickerView!

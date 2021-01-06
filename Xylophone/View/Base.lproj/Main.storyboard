@@ -233,7 +233,7 @@
         <!--Menu View Controller-->
         <scene sceneID="cBK-1D-k0R">
             <objects>
-                <viewController id="E9b-5O-xJQ" userLabel="Menu View Controller" customClass="MenuViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="E9b-5O-xJQ" userLabel="Menu View Controller" customClass="MenuViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I3b-44-1Mu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,7 +324,7 @@
         <!--Game Options View Controller-->
         <scene sceneID="c8e-bs-Bkw">
             <objects>
-                <viewController id="755-k2-c9Y" userLabel="Game Options View Controller" customClass="GameOptionsViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameOptionsViewController" id="755-k2-c9Y" userLabel="Game Options View Controller" customClass="GameOptionsViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4gZ-DM-RCM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
