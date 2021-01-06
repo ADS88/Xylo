@@ -5,13 +5,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShopItemView" customModule="Xylo" customModuleProvider="target">
             <connections>
                 <outlet property="shopItemButton" destination="gQ8-zj-MiA" id="HJ8-db-EWJ"/>
+                <outlet property="shopItemCost" destination="nVp-J6-ykK" id="dKK-ja-D79"/>
                 <outlet property="shopItemImage" destination="jVE-KJ-15U" id="sos-jR-CYO"/>
                 <outlet property="shopItemTitle" destination="HFj-cq-4L2" id="zjz-EV-R2C"/>
             </connections>
@@ -22,13 +22,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tPP-nz-8Aa">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="10" y="0.0" width="394" height="862"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xylologo" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-KJ-15U">
-                            <rect key="frame" x="36.5" y="0.0" width="341" height="751"/>
+                            <rect key="frame" x="26.5" y="0.0" width="341" height="751"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-uq-VZ5">
-                            <rect key="frame" x="121" y="751" width="172.5" height="45"/>
+                            <rect key="frame" x="111" y="751" width="172.5" height="45"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cool Keyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFj-cq-4L2">
                                     <rect key="frame" x="0.0" y="0.0" width="112" height="45"/>
@@ -48,19 +48,18 @@
                             </subviews>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ8-zj-MiA">
-                            <rect key="frame" x="192" y="796" width="30" height="66"/>
+                            <rect key="frame" x="182" y="796" width="30" height="66"/>
                             <state key="normal" title="Buy"/>
                         </button>
                     </subviews>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tPP-nz-8Aa" secondAttribute="bottom" id="2Rg-cR-tX6"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tPP-nz-8Aa" secondAttribute="trailing" id="Dm7-tO-11X"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tPP-nz-8Aa" secondAttribute="trailing" constant="10" id="Dm7-tO-11X"/>
                 <constraint firstItem="tPP-nz-8Aa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HAy-sJ-ims"/>
-                <constraint firstItem="tPP-nz-8Aa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NQM-0C-Nup"/>
+                <constraint firstItem="tPP-nz-8Aa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="NQM-0C-Nup"/>
             </constraints>
             <point key="canvasLocation" x="-284.05797101449275" y="82.366071428571431"/>
         </view>
@@ -68,8 +67,5 @@
     <resources>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xylologo" width="341" height="341"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

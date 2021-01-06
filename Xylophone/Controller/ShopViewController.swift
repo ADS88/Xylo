@@ -49,8 +49,16 @@ extension ShopViewController: iCarouselDataSource, iCarouselDelegate {
         let view = ShopItemView()
         view.layer.cornerRadius = 20
         view.frame.size = CGSize(width: self.view.frame.size.width/1.2, height: self.view.frame.size.height / 1.4)
-        view.backgroundColor = .red
-        view.shopItemTitle.text = shopItems[index].name
+        //view.backgroundColor = .red
+        let shopItem = shopItems[index]
+        view.shopItemTitle.text = shopItem.name
+        let image = UIImage(named: shopItem.imageName! + "")
+        view.shopItemImage.image = image
+        view.backgroundColor = UIColor(named: "xyloPurple")
+        view.shopItemCost.text = String(shopItem.cost)
+    
+        view.shopItemButton.isHidden = shopItem.hasBeenPurchased
+
         //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.startGame))
 //        view.addGestureRecognizer(tapGesture)
 //

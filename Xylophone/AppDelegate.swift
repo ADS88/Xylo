@@ -48,11 +48,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     shopItem.name = name
                     shopItem.cost = Int64(cost)
                     shopItem.hasBeenPurchased = false
+                    shopItem.imageName = "blackKeyboard"
                 }
                 let defaultKeyboard = ShopItem(context: backgroundContext)
                 defaultKeyboard.name = "Standard keyboard"
                 defaultKeyboard.cost = 0
                 defaultKeyboard.hasBeenPurchased = true
+                defaultKeyboard.imageName = "blackKeyboard"
                 try backgroundContext.save()
                 userDefaults.setValue(true, forKey: preloadedDataKey)
             } catch {
