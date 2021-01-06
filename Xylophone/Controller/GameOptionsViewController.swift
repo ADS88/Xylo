@@ -8,7 +8,7 @@
 import UIKit
 import iCarousel
 
-class GameOptionsViewController: UIViewController, iCarouselDataSource, iCarouselDelegate, Storyboarded {
+class GameOptionsViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
     
@@ -47,27 +47,12 @@ class GameOptionsViewController: UIViewController, iCarouselDataSource, iCarouse
                      GameModeOption(title: "Song Mode", description: "Notes of a chosen song will be played visual indication. Tap the correct notes back to gain points. The amount of notes to remember increases over time", color: UIColor(named: "xyloOrange") ?? .orange, imageName: "music.note.list")
     ]
     
-    
+}
+
+extension GameOptionsViewController: iCarouselDataSource, iCarouselDelegate {
     func carouselDidScroll(_ carousel: iCarousel) {
         updatePickerVisibility()
     }
-    
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return 3
-    }
-    
-    func updatePickerVisibility(){
-        if carousel.currentItemIndex == GameMode.SONG.rawValue {
-            songPickerView.isHidden = false
-        } else {
-            songPickerView.isHidden = true
-        }
-    }
-    
-    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
-            updatePickerVisibility()
-      }
-    
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         
@@ -86,8 +71,23 @@ class GameOptionsViewController: UIViewController, iCarouselDataSource, iCarouse
         
         return view
     }
+    
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return 3
+    }
+    
+    func updatePickerVisibility(){
+        if carousel.currentItemIndex == GameMode.SONG.rawValue {
+            songPickerView.isHidden = false
+        } else {
+            songPickerView.isHidden = true
+        }
+    }
+    
+    func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
+            updatePickerVisibility()
+      }
 }
-
 
 extension GameOptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
