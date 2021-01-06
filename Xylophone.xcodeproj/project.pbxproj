@@ -15,6 +15,9 @@
 		4966E0F4259ED6F6002E0C88 /* GameModeOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966E0F3259ED6F6002E0C88 /* GameModeOptionView.swift */; };
 		4966E0F7259ED713002E0C88 /* GameModeOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4966E0F6259ED713002E0C88 /* GameModeOptionView.xib */; };
 		4966E0FB259EE464002E0C88 /* preloadeddata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4966E0FA259EE464002E0C88 /* preloadeddata.plist */; };
+		496A30F625A53A9A0009AD18 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A30F325A53A9A0009AD18 /* Storyboarded.swift */; };
+		496A30F725A53A9A0009AD18 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A30F425A53A9A0009AD18 /* MainCoordinator.swift */; };
+		496A30F825A53A9A0009AD18 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A30F525A53A9A0009AD18 /* Coordinator.swift */; };
 		49A23DDC259EEC84003718FE /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A23DDB259EEC84003718FE /* ShopViewController.swift */; };
 		49A23DDF259F2A5A003718FE /* KeyGenerationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A23DDE259F2A5A003718FE /* KeyGenerationStrategy.swift */; };
 		49A23DE2259F2B03003718FE /* RandomKeyGenerationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A23DE1259F2B03003718FE /* RandomKeyGenerationStrategy.swift */; };
@@ -48,6 +51,9 @@
 		4966E0F3259ED6F6002E0C88 /* GameModeOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeOptionView.swift; sourceTree = "<group>"; };
 		4966E0F6259ED713002E0C88 /* GameModeOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameModeOptionView.xib; sourceTree = "<group>"; };
 		4966E0FA259EE464002E0C88 /* preloadeddata.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = preloadeddata.plist; sourceTree = "<group>"; };
+		496A30F325A53A9A0009AD18 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		496A30F425A53A9A0009AD18 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		496A30F525A53A9A0009AD18 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		49A23DDB259EEC84003718FE /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		49A23DDE259F2A5A003718FE /* KeyGenerationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyGenerationStrategy.swift; sourceTree = "<group>"; };
 		49A23DE1259F2B03003718FE /* RandomKeyGenerationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomKeyGenerationStrategy.swift; sourceTree = "<group>"; };
@@ -105,6 +111,16 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		496A30F225A53A9A0009AD18 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				496A30F325A53A9A0009AD18 /* Storyboarded.swift */,
+				496A30F425A53A9A0009AD18 /* MainCoordinator.swift */,
+				496A30F525A53A9A0009AD18 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		49B5979E25940D6600300565 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +142,7 @@
 		49B597A925940D6600300565 /* Xylophone */ = {
 			isa = PBXGroup;
 			children = (
+				496A30F225A53A9A0009AD18 /* Coordinators */,
 				4966E0F9259EE449002E0C88 /* Data */,
 				49B99D7825946613005E15B6 /* Model */,
 				49B597C52594184A00300565 /* Sounds */,
@@ -330,8 +347,11 @@
 				4966E0F4259ED6F6002E0C88 /* GameModeOptionView.swift in Sources */,
 				49A23DE2259F2B03003718FE /* RandomKeyGenerationStrategy.swift in Sources */,
 				49B99D7E25946999005E15B6 /* Xylophone.xcdatamodeld in Sources */,
+				496A30F825A53A9A0009AD18 /* Coordinator.swift in Sources */,
 				49A23DDC259EEC84003718FE /* ShopViewController.swift in Sources */,
+				496A30F725A53A9A0009AD18 /* MainCoordinator.swift in Sources */,
 				4966E0E6259C17CF002E0C88 /* GameModeOptions.swift in Sources */,
+				496A30F625A53A9A0009AD18 /* Storyboarded.swift in Sources */,
 				49B597AF25940D6600300565 /* GameViewController.swift in Sources */,
 				49A23DE6259F2C00003718FE /* SongKeyGenerationStrategy.swift in Sources */,
 				4966E0EB259D5645002E0C88 /* HighScoreTableViewCell.swift in Sources */,
