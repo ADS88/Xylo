@@ -23,15 +23,13 @@ class GameViewController: UIViewController, Storyboarded {
     @IBOutlet weak var scoreLabel: UILabel!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var keyGenerationStrategy : KeyGenerationStrategy = SongKeyGenerationStrategy()
+    var keyGenerationStrategy : KeyGenerationStrategy!
     var player: AVAudioPlayer?
     let sounds = ["C", "D", "E", "F", "G", "A", "B"]
     var expectedSounds = [String]()
     var currentIndex = 0
     var buttons = [UIButton]()
     var soundToButton = [String:UIButton]()
-    var leastKeysPlayed = 1
-    var mostKeysPlayed = 2
     var score: Int64 = 0
     var gameMode: Int = 0
     
@@ -95,15 +93,13 @@ class GameViewController: UIViewController, Storyboarded {
     }
     
     func newSetOfKeys(){
-        if (!keyGenerationStrategy.shouldContinuePlaying()) {
+        expectedSounds = keyGenerationStrategy.generateKeys()
+        if expectedSounds.isEmpty{
             gameOver()
         }
         currentIndex = 0
         setKeysClickable(to: false)
-        expectedSounds = keyGenerationStrategy.generateKeys(sounds: sounds, leastKeysPlayed: leastKeysPlayed, mostKeysPlayed: mostKeysPlayed)
         playKeys(expectedSounds)
-        leastKeysPlayed += 1
-        mostKeysPlayed += 1
     }
     
     func playKeys(_ keys: [String]){

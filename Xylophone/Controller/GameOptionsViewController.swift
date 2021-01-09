@@ -15,10 +15,18 @@ class GameOptionsViewController: UIViewController, Storyboarded {
     @IBOutlet weak var carousel: iCarousel!
     @IBOutlet weak var songPickerView: UIPickerView!
     
-    let songNames = ["Mary had a little lamb", "La Bamba", "Mo Bamba", "Bobby Shmurda"]
+    
+    let songs = [Song(name:"Mary had a little lamb", notes:  ["B", "A", "G", "A", "B", "B", "B", "A", "A", "A", "B", "B", "B", "B", "A", "G", "A", "B", "B", "B", "B", "A", "A", "B", "A", "G"]),
+                 Song(name: "La Bamba", notes: ["B"]),
+                 Song(name: "Mo Bamba", notes: ["C"]),
+                 Song(name: "Bobby Shmurda", notes: ["D"])
+    ]
+    
+    var chosenSong: Song!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        chosenSong = songs[0]
         view.addSubview(carousel)
         carousel.type = .rotary
         carousel.dataSource = self
@@ -26,7 +34,6 @@ class GameOptionsViewController: UIViewController, Storyboarded {
         songPickerView.delegate = self
         songPickerView.dataSource = self
         updatePickerVisibility()
-        // Do any additional setup after loading the view.
     }
     
     
@@ -34,9 +41,9 @@ class GameOptionsViewController: UIViewController, Storyboarded {
     func startGame(){
         let keyGenerationStrategy: KeyGenerationStrategy
         if carousel.currentItemIndex == GameMode.SONG.rawValue {
-            keyGenerationStrategy = SongKeyGenerationStrategy()
+            keyGenerationStrategy = SongKeyGenerationStrategy(notes: chosenSong.notes, sounds: ["C", "D", "E", "F", "G", "A", "B"])
         } else {
-            keyGenerationStrategy = RandomKeyGenerationStrategy()
+            keyGenerationStrategy = RandomKeyGenerationStrategy(sounds: ["C", "D", "E", "F", "G", "A", "B"])
         }
         self.coordinator?.playGame(gameMode: carousel.currentItemIndex, keyGenerationStrategy: keyGenerationStrategy)
     }
@@ -91,8 +98,12 @@ extension GameOptionsViewController: iCarouselDataSource, iCarouselDelegate {
 
 extension GameOptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        chosenSong = songs[row]
+    }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-         return songNames[row]
+        return songs[row].name
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -100,7 +111,7 @@ extension GameOptionsViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return songNames.count
+        return songs.count
     }
     
 }

@@ -10,20 +10,33 @@ import Foundation
 struct SongKeyGenerationStrategy : KeyGenerationStrategy {
     
     var currentIndex = 0
-    let song = ["B", "A", "G", "A", "B", "B", "B", "A", "A", "A", "B", "B", "B", "B", "A", "G", "A", "B", "B", "B", "B", "A", "A", "B", "A", "G"]
+    var notes = [String]()
+    var sounds = [String]()
+    var leastKeysPlayed = 1
+    var mostKeysPlayed = 2
     
-    mutating func generateKeys(sounds: [String], leastKeysPlayed: Int, mostKeysPlayed: Int) -> [String] {
+    mutating func generateKeys() -> [String] {
         var items = [String]()
         var numKeys = Int.random(in: leastKeysPlayed...mostKeysPlayed)
-        while currentIndex < song.count && numKeys > 0 {
-            items.append(song[currentIndex])
+        while currentIndex < notes.count && numKeys > 0 {
+            items.append(notes[currentIndex])
             currentIndex += 1
             numKeys -= 1
         }
+        leastKeysPlayed += 1
+        mostKeysPlayed += 1
         return items
     }
     
-    func shouldContinuePlaying() -> Bool {
-        return currentIndex < song.count
+    mutating func reset(){
+        currentIndex = 0
+        leastKeysPlayed = 1
+        mostKeysPlayed = 2
     }
+    
+    init(notes: [String], sounds: [String]) {
+        self.notes = notes
+        self.sounds = sounds
+    }
+    
 }

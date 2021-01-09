@@ -14,9 +14,10 @@ class GameOverViewController: UIViewController, Storyboarded {
     @IBOutlet weak var scoreText: UILabel!
     var score: Int64 = 0
     var gameMode = 0
-    var keyGenerationStrategy : KeyGenerationStrategy = RandomKeyGenerationStrategy()
+    var keyGenerationStrategy: KeyGenerationStrategy!
     
     @IBAction func playAgainPressed(_ sender: UIButton) {
+        keyGenerationStrategy.reset()
         coordinator?.playGame(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy)
     }
     
