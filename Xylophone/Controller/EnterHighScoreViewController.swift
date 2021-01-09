@@ -21,7 +21,8 @@ class EnterHighScoreViewController: UIViewController, Storyboarded {
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         var name = "Unknown"
         if let text = nameTextField.text, !text.isEmpty {
-           name = text
+            name = text
+            UserDefaults.standard.set(name, forKey: "userName")
         }
         highScoreBrain.createHighScore(name: name, score: score)
         coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy!, score: score)
@@ -32,6 +33,7 @@ class EnterHighScoreViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         scoreLabel.text = String(score)
+        nameTextField.text = UserDefaults.standard.string(forKey: "userName")
 
         // Do any additional setup after loading the view.
     }
