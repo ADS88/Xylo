@@ -415,11 +415,69 @@
             </objects>
             <point key="canvasLocation" x="-91.304347826086968" y="857.8125"/>
         </scene>
+        <!--Enter High Score View Controller-->
+        <scene sceneID="Kjx-H8-KVL">
+            <objects>
+                <viewController storyboardIdentifier="EnterHighScoreViewController" id="qfS-s7-X7p" userLabel="Enter High Score View Controller" customClass="EnterHighScoreViewController" customModule="Xylo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YBD-Dk-TG6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="veT-3c-6fL">
+                                <rect key="frame" x="88.5" y="302" width="237.5" height="292.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIx-Ru-UNC">
+                                        <rect key="frame" x="58" y="0.0" width="121" height="119.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <color key="textColor" name="xyloPurple"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New High Score!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJU-PA-ofc">
+                                        <rect key="frame" x="0.0" y="136.5" width="237.5" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYk-md-dP7">
+                                        <rect key="frame" x="74" y="193" width="89.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guQ-jt-Cs0">
+                                        <rect key="frame" x="67.5" y="248.5" width="102" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="Continue"/>
+                                        <connections>
+                                            <action selector="continueButtonPressed:" destination="qfS-s7-X7p" eventType="touchUpInside" id="dDl-Tc-932"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cL7-4z-G67"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="veT-3c-6fL" firstAttribute="centerY" secondItem="YBD-Dk-TG6" secondAttribute="centerY" id="IYj-Je-qJP"/>
+                            <constraint firstItem="veT-3c-6fL" firstAttribute="centerX" secondItem="YBD-Dk-TG6" secondAttribute="centerX" id="OTl-43-cvJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="RYk-md-dP7" id="7QK-XG-jAH"/>
+                        <outlet property="scoreLabel" destination="mIx-Ru-UNC" id="gS7-Hq-1hi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDU-Ge-klP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="860"/>
+        </scene>
     </scenes>
     <resources>
         <image name="xylologo" width="341" height="341"/>
         <namedColor name="xyloBlue">
             <color red="0.31372549019607843" green="0.70196078431372544" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="xyloPurple">
+            <color red="0.74509803921568629" green="0.45490196078431372" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

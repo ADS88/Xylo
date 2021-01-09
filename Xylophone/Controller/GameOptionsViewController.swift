@@ -23,7 +23,7 @@ class GameOptionsViewController: UIViewController, Storyboarded {
     ]
     
     var chosenSong: Song!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         chosenSong = songs[0]
@@ -69,12 +69,12 @@ extension GameOptionsViewController: iCarouselDataSource, iCarouselDelegate {
         view.backgroundColor = gameModes[index].color
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.startGame))
         view.addGestureRecognizer(tapGesture)
-
+        
         let image = UIImage(systemName: gameModes[index].imageName)
         view.optionImage.image = image
         view.optionTitle.text = gameModes[index].title
         view.optionDescription.text = gameModes[index].description
-       
+        
         
         return view
     }
@@ -92,8 +92,8 @@ extension GameOptionsViewController: iCarouselDataSource, iCarouselDelegate {
     }
     
     func carouselCurrentItemIndexDidChange(_ carousel: iCarousel) {
-            updatePickerVisibility()
-      }
+        updatePickerVisibility()
+    }
 }
 
 extension GameOptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {

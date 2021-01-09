@@ -65,23 +65,22 @@ class GameViewController: UIViewController, Storyboarded {
     }
     
     func gameOver(){
-        createHighScore()
         addUserMoney()
-        coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score)
+        if shouldCreateHighScore(){
+            coordinator?.enterHighScoreName(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score)
+        } else {
+            coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score)
+        }
+    }
+    
+    func shouldCreateHighScore() -> Bool{
+        return true
     }
     
     func addUserMoney(){
         var userMoney = UserDefaults.standard.integer(forKey: "userMoney")
         userMoney += Int(score)
         UserDefaults.standard.set(userMoney, forKey: "userMoney")
-    }
-    
-    func createHighScore(){
-        let highScore = HighScore(context: context)
-        highScore.name = "Andrew"
-        highScore.score = score
-        highScore.date = Date()
-        try! self.context.save()
     }
     
     func buttonOpaqueOnClickEffect(button: UIButton, newOpacity: CGFloat){

@@ -70,4 +70,14 @@ class MainCoordinator: Coordinator {
         vc.keyGenerationStrategy = keyGenerationStrategy
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func enterHighScoreName(gameMode: Int, keyGenerationStrategy: KeyGenerationStrategy, score: Int64){
+        hideNavBar()
+        let vc = EnterHighScoreViewController.instantiate()
+        vc.score = score
+        vc.keyGenerationStrategy = keyGenerationStrategy
+        vc.gameMode = gameMode
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
