@@ -11,6 +11,7 @@ import CoreData
 class HighScoreViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
+    let highScoreBrain = HighScoreBrain()
 
     @IBOutlet weak var highScoreTableView: UITableView!
     
@@ -18,24 +19,10 @@ class HighScoreViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
+        scores = highScoreBrain.getTopTenScores()
         let nib = UINib(nibName: "HighScoreTableViewCell", bundle: nil )
         highScoreTableView.register(nib, forCellReuseIdentifier: "HighScoreTableViewCell")
         highScoreTableView.dataSource = self
-    }
-    
-    func getData(){
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let request: NSFetchRequest = HighScore.fetchRequest()
-        request.fetchLimit = 10
-        let sortDescriptor = NSSortDescriptor(key: "score", ascending: false)
-        let sortDescriptors = [sortDescriptor]
-        request.sortDescriptors = sortDescriptors
-        do {
-            scores = try context.fetch(request)
-        } catch {
-            print("error")
-        }
     }
 }
 

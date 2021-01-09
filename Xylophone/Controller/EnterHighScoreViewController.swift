@@ -12,14 +12,18 @@ class EnterHighScoreViewController: UIViewController, Storyboarded {
     @IBOutlet weak var scoreLabel: UILabel!
     weak var coordinator: MainCoordinator?
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let highScoreBrain = HighScoreBrain()
     
     var score: Int64 = 0
     var gameMode = 0
     var keyGenerationStrategy: KeyGenerationStrategy!
 
     @IBAction func continueButtonPressed(_ sender: UIButton) {
-        createHighScore()
+        var name = "Unknown"
+        if let text = nameTextField.text, !text.isEmpty {
+           name = text
+        }
+        highScoreBrain.createHighScore(name: name, score: score)
         coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy!, score: score)
     }
     
@@ -30,13 +34,5 @@ class EnterHighScoreViewController: UIViewController, Storyboarded {
         scoreLabel.text = String(score)
 
         // Do any additional setup after loading the view.
-    }
-    
-    func createHighScore(){
-        let highScore = HighScore(context: context)
-        highScore.name = nameTextField.text 
-        highScore.score = score
-        highScore.date = Date()
-        try! self.context.save()
     }
 }

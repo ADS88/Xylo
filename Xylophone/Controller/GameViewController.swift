@@ -22,6 +22,7 @@ class GameViewController: UIViewController, Storyboarded {
     @IBOutlet weak var bButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    let highScoreBrain = HighScoreBrain()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var keyGenerationStrategy : KeyGenerationStrategy!
     var player: AVAudioPlayer?
@@ -66,15 +67,11 @@ class GameViewController: UIViewController, Storyboarded {
     
     func gameOver(){
         addUserMoney()
-        if shouldCreateHighScore(){
+        if highScoreBrain.shouldCreateHighScore(score: score){
             coordinator?.enterHighScoreName(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score)
         } else {
             coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score)
         }
-    }
-    
-    func shouldCreateHighScore() -> Bool{
-        return true
     }
     
     func addUserMoney(){
