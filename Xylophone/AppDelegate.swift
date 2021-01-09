@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let preloadedDataKey = "didPreloadData"
         let userDefaults = UserDefaults.standard
         if userDefaults.bool(forKey: preloadedDataKey) == false {
+            userDefaults.set(0, forKey: "userMoney")
             preloadData(key: preloadedDataKey, userDefaults: userDefaults)
         }
     }

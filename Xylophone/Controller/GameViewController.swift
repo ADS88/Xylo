@@ -68,7 +68,14 @@ class GameViewController: UIViewController, Storyboarded {
     
     func gameOver(){
         createHighScore()
+        addUserMoney()
         coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score)
+    }
+    
+    func addUserMoney(){
+        var userMoney = UserDefaults.standard.integer(forKey: "userMoney")
+        userMoney += Int(score)
+        UserDefaults.standard.set(userMoney, forKey: "userMoney")
     }
     
     func createHighScore(){
@@ -116,9 +123,7 @@ class GameViewController: UIViewController, Storyboarded {
     }
     
     func setKeysClickable(to isEnabled: Bool){
-        for button in buttons {
-            button.isEnabled = isEnabled
-        }
+        buttons.forEach{button in button.isEnabled = isEnabled}
     }
     
     func playSound(soundName: String) {
@@ -135,14 +140,6 @@ class GameViewController: UIViewController, Storyboarded {
             } catch let error {
                 print(error.localizedDescription)
             }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToGameOver"{
-            let destinationVC = segue.destination as! GameOverViewController
-            destinationVC.score = score
-            destinationVC.gameMode = gameMode
-        }
     }
 
 }

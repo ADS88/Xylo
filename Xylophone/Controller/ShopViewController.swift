@@ -14,8 +14,11 @@ class ShopViewController: UIViewController, Storyboarded {
     @IBOutlet weak var carousel: iCarousel!
     weak var coordinator: MainCoordinator?
     var shopItems = [ShopItem]()
+    var userMoney = 0
     
     override func viewDidLoad() {
+        userMoney = UserDefaults.standard.integer(forKey: "userMoney")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "\(userMoney)", style: .plain, target: self, action: nil)
         super.viewDidLoad()
         getShopItems()
         carousel.type = .rotary
@@ -27,15 +30,16 @@ class ShopViewController: UIViewController, Storyboarded {
     func getShopItems(){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request: NSFetchRequest = ShopItem.fetchRequest()
-        print("hello")
         do {
             shopItems = try context.fetch(request)
-            for item in shopItems {
-                print(item.name)
-            }
         } catch {
             print("error")
         }
+    }
+    
+    @objc
+    func buttonClicked(){
+        print(shopItems[carousel.currentItemIndex].cost)
     }
 }
 
@@ -47,26 +51,17 @@ extension ShopViewController: iCarouselDataSource, iCarouselDelegate {
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         
         let view = ShopItemView()
-        view.layer.cornerRadius = 20
         view.frame.size = CGSize(width: self.view.frame.size.width/1.2, height: self.view.frame.size.height / 1.4)
-        //view.backgroundColor = .red
         let shopItem = shopItems[index]
         view.shopItemTitle.text = shopItem.name
-        let image = UIImage(named: shopItem.imageName! + "")
+        let image = UIImage(named: shopItem.imageName!)
         view.shopItemImage.image = image
-        view.backgroundColor = UIColor(named: "xyloPurple")
+        view.layer.borderColor = UIColor(named: "xyloPurple")?.cgColor
         view.shopItemCost.text = String(shopItem.cost)
-    
         view.shopItemButton.isHidden = shopItem.hasBeenPurchased
-
-        //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.startGame))
-//        view.addGestureRecognizer(tapGesture)
-//
-//        let image = UIImage(systemName: gameModes[index].imageName)
-//        view.optionImage.image = image
-//        view.optionTitle.text = gameModes[index].title
-//        view.optionDescription.text = gameModes[index].description
-       
+        //view.shopItemButton.isEnabled = shopItem.cost 
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.buttonClicked))
+        view.shopItemButton.addGestureRecognizer(tapGesture)
         
         return view
     }

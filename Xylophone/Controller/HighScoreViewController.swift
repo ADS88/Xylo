@@ -21,7 +21,6 @@ class HighScoreViewController: UIViewController, Storyboarded {
         getData()
         let nib = UINib(nibName: "HighScoreTableViewCell", bundle: nil )
         highScoreTableView.register(nib, forCellReuseIdentifier: "HighScoreTableViewCell")
-        highScoreTableView.delegate = self
         highScoreTableView.dataSource = self
     }
     
@@ -40,28 +39,28 @@ class HighScoreViewController: UIViewController, Storyboarded {
     }
 }
 
-extension HighScoreViewController: UITableViewDelegate {
-    
-}
-
 extension HighScoreViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreTableViewCell", for: indexPath) as! HighScoreTableViewCell
-        cell.nameLabel.text = scores[indexPath.row].name
-        cell.scoreLabel.text = String(scores[indexPath.row].score)
+        let highScoreCell: HighScoreTableViewCell = {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HighScoreTableViewCell", for: indexPath) as! HighScoreTableViewCell
+            cell.nameLabel.text = scores[indexPath.row].name
+            cell.scoreLabel.text = String(scores[indexPath.row].score)
+            cell.layoutIfNeeded()
+            return cell
+        }()
         
         if indexPath.row % 2 == 0 {
-            cell.surroundingBlockView.backgroundColor = UIColor(named: "xyloBlue")
+            highScoreCell.surroundingBlockView.backgroundColor = UIColor(named: "xyloBlue")
         } else {
-            cell.nameLabel.textColor = UIColor(named: "xyloBlue")
-            cell.scoreLabel.textColor = UIColor(named: "xyloBlue")
+            highScoreCell.nameLabel.textColor = UIColor(named: "xyloBlue")
+            highScoreCell.scoreLabel.textColor = UIColor(named: "xyloBlue")
         }
         
-        cell.layoutIfNeeded()
-        return cell
+        return highScoreCell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int ) -> Int {
         return scores.count
     }
+    
 }
