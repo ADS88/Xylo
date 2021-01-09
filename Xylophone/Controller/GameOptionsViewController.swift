@@ -51,7 +51,8 @@ class GameOptionsViewController: UIViewController, Storyboarded {
     
     let gameModes = [GameModeOption(title: "Memory", description: "Notes will appear to be tapped on the screen. Tap the correct notes back to gain points. The amount of notes to remember increases over time ", color: UIColor(named: "xyloPurple") ?? .purple, imageName: "music.quarternote.3"),
                      GameModeOption(title: "Pitch Detection", description: "Notes will be played without visual indication. Tap the correct notes back to gain points. The amount of notes to remember increases over time", color: UIColor(named: "xyloBlue") ?? .blue, imageName: "music.note"),
-                     GameModeOption(title: "Song Mode", description: "Notes of a chosen song will be played visual indication. Tap the correct notes back to gain points. The amount of notes to remember increases over time", color: UIColor(named: "xyloOrange") ?? .orange, imageName: "music.note.list")
+                     GameModeOption(title: "Song Mode", description: "Notes of a chosen song will be played visual indication. Tap the correct notes back to gain points. The amount of notes to remember increases over time", color: UIColor(named: "xyloOrange") ?? .orange, imageName: "music.note.list"),
+                     GameModeOption(title: "Free Play", description: "Jam out on the keyboard", color: UIColor(named: "xlyoGreen") ?? .lightGray, imageName: "scribble")
     ]
     
 }
@@ -80,7 +81,7 @@ extension GameOptionsViewController: iCarouselDataSource, iCarouselDelegate {
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return 3
+        return gameModes.count
     }
     
     func updatePickerVisibility(){

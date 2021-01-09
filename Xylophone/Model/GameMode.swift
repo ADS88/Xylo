@@ -1,3 +1,3 @@
 enum GameMode: Int {
-    case MEMORY = 0, PITCH_IDENTIFICATION, SONG
+    case MEMORY = 0, PITCH_IDENTIFICATION, SONG, FREE_PLAY
 }

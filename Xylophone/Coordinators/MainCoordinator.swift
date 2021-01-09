@@ -64,6 +64,9 @@ class MainCoordinator: Coordinator {
     
     func playGame(gameMode: Int, keyGenerationStrategy: KeyGenerationStrategy){
         hideNavBar()
+        if gameMode == GameMode.FREE_PLAY.rawValue {
+            showNavBar()
+        }
         let vc = GameViewController.instantiate()
         vc.coordinator = self
         vc.gameMode = gameMode

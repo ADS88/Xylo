@@ -46,13 +46,23 @@ class GameViewController: UIViewController, Storyboarded {
             "A": aButton,
             "B": bButton
         ]
-        newSetOfKeys()
+        if gameMode == GameMode.FREE_PLAY.rawValue{
+            scoreLabel.alpha = 0.0
+        } else {
+            newSetOfKeys()
+        }
     }
 
     @IBAction func keyPressed(_ sender: UIButton) {
         let sound = sounds[sender.tag]
         playSound(soundName: sound)
         buttonOpaqueOnClickEffect(button: sender, newOpacity: 0.5)
+        if gameMode != GameMode.FREE_PLAY.rawValue{
+            checkIfKeyisCorrect(sound)
+        }
+    }
+    
+    func checkIfKeyisCorrect(_ sound: String){
         if sound == expectedSounds[currentIndex] {
             currentIndex += 1
             score += 1
