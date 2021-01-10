@@ -10,15 +10,28 @@ import CoreData
 import iCarousel
 
 class ShopViewController: UIViewController, Storyboarded {
+
     
     @IBOutlet weak var carousel: iCarousel!
     weak var coordinator: MainCoordinator?
     var shopItems = [ShopItem]()
-    var userMoney = 0
+    var userMoney: Int64 = 0
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var amountButton: UIBarButtonItem!
+    var currentlyUsedItemName = "default"
     
     override func viewDidLoad() {
-        userMoney = UserDefaults.standard.integer(forKey: "userMoney")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "\(userMoney)", style: .plain, target: self, action: nil)
+        userMoney = Int64(UserDefaults.standard.integer(forKey: "userMoney"))
+        currentlyUsedItemName = UserDefaults.standard.string(forKey: "currentKeyboard")!
+        
+        let image = UIImage(systemName: "bitcoinsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "xyloBlue")!)
+       
+        let coinButton = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
+        
+        
+        amountButton = UIBarButtonItem(title: "\(userMoney)", style: .plain, target: self, action: nil)
+        
+        navigationItem.setRightBarButtonItems([amountButton, coinButton], animated: false)
         super.viewDidLoad()
         getShopItems()
         carousel.type = .rotary
@@ -27,8 +40,12 @@ class ShopViewController: UIViewController, Storyboarded {
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        UserDefaults.standard.set(userMoney, forKey: "userMoney")
+        UserDefaults.standard.set(currentlyUsedItemName, forKey: "currentKeyboard")
+    }
+    
     func getShopItems(){
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request: NSFetchRequest = ShopItem.fetchRequest()
         do {
             shopItems = try context.fetch(request)
@@ -37,9 +54,38 @@ class ShopViewController: UIViewController, Storyboarded {
         }
     }
     
+    func purchaseShopItem(shopItem: ShopItem){
+        if userMoney >= shopItem.cost {
+            shopItem.hasBeenPurchased = true
+            do {
+                try context.save()
+                userMoney -= shopItem.cost
+                amountButton.title = "\(userMoney)"
+            } catch {
+                print("error")
+            }
+            
+        } else {
+            print("too poor")
+        }
+    }
+    
+    func switchCurrentKeyboard(shopItem: ShopItem){
+        currentlyUsedItemName = shopItem.name!
+    }
+    
     @objc
     func buttonClicked(){
-        print(shopItems[carousel.currentItemIndex].cost)
+        let shopItem = shopItems[carousel.currentItemIndex]
+        if shopItem.hasBeenPurchased {
+            switchCurrentKeyboard(shopItem: shopItem)
+        } else {
+            purchaseShopItem(shopItem: shopItem)
+        }
+        UIView.transition(with: carousel, duration: 0.35, options: .transitionCrossDissolve, animations: { () -> Void in
+            self.carousel!.reloadData()
+        }, completion: nil)
+       
     }
 }
 
@@ -58,8 +104,18 @@ extension ShopViewController: iCarouselDataSource, iCarouselDelegate {
         view.shopItemImage.image = image
         view.layer.borderColor = UIColor(named: "xyloPurple")?.cgColor
         view.shopItemCost.text = String(shopItem.cost)
-        view.shopItemButton.isHidden = shopItem.hasBeenPurchased
-        //view.shopItemButton.isEnabled = shopItem.cost 
+        
+        if shopItem.hasBeenPurchased {
+            view.shopItemButton.setTitle("Use", for: .normal)
+            view.shopItemButton.backgroundColor = .blue
+        } else if shopItem.cost >= userMoney {
+            view.shopItemButton.isEnabled = false
+        }
+        if shopItem.name == currentlyUsedItemName {
+            view.shopItemButton.isHidden = true
+        }
+            
+            
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.buttonClicked))
         view.shopItemButton.addGestureRecognizer(tapGesture)
         

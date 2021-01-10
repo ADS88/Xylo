@@ -33,7 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let preloadedDataKey = "didPreloadData"
         let userDefaults = UserDefaults.standard
         if userDefaults.bool(forKey: preloadedDataKey) == false {
-            userDefaults.set(0, forKey: "userMoney")
+            userDefaults.set(200, forKey: "userMoney")
+            userDefaults.set("Standard keyboard", forKey: "currentKeyboard")
             preloadData(key: preloadedDataKey, userDefaults: userDefaults)
         }
     }
