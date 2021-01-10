@@ -23,6 +23,7 @@
 		499B372325A9431400588CD0 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B372225A9431400588CD0 /* Song.swift */; };
 		499B372D25A951DC00588CD0 /* EnterHighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B372C25A951DC00588CD0 /* EnterHighScoreViewController.swift */; };
 		499B373025A9566F00588CD0 /* HighScoreBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B372F25A9566F00588CD0 /* HighScoreBrain.swift */; };
+		499B373425AAD13500588CD0 /* KeyboardApperanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B373325AAD13400588CD0 /* KeyboardApperanceHelper.swift */; };
 		49A23DDC259EEC84003718FE /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A23DDB259EEC84003718FE /* ShopViewController.swift */; };
 		49A23DDF259F2A5A003718FE /* KeyGenerationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A23DDE259F2A5A003718FE /* KeyGenerationStrategy.swift */; };
 		49A23DE2259F2B03003718FE /* RandomKeyGenerationStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A23DE1259F2B03003718FE /* RandomKeyGenerationStrategy.swift */; };
@@ -63,6 +64,7 @@
 		499B372225A9431400588CD0 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		499B372C25A951DC00588CD0 /* EnterHighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterHighScoreViewController.swift; sourceTree = "<group>"; };
 		499B372F25A9566F00588CD0 /* HighScoreBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreBrain.swift; sourceTree = "<group>"; };
+		499B373325AAD13400588CD0 /* KeyboardApperanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardApperanceHelper.swift; sourceTree = "<group>"; };
 		49A23DDB259EEC84003718FE /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		49A23DDE259F2A5A003718FE /* KeyGenerationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyGenerationStrategy.swift; sourceTree = "<group>"; };
 		49A23DE1259F2B03003718FE /* RandomKeyGenerationStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomKeyGenerationStrategy.swift; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		499B373225AAD12700588CD0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				499B373325AAD13400588CD0 /* KeyboardApperanceHelper.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		49B5979E25940D6600300565 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		49B597A925940D6600300565 /* Xylophone */ = {
 			isa = PBXGroup;
 			children = (
+				499B373225AAD12700588CD0 /* Util */,
 				496A30F225A53A9A0009AD18 /* Coordinators */,
 				4966E0F9259EE449002E0C88 /* Data */,
 				49B99D7825946613005E15B6 /* Model */,
@@ -373,6 +384,7 @@
 				49A23DE6259F2C00003718FE /* SongKeyGenerationStrategy.swift in Sources */,
 				4966E0EB259D5645002E0C88 /* HighScoreTableViewCell.swift in Sources */,
 				49B597AB25940D6600300565 /* AppDelegate.swift in Sources */,
+				499B373425AAD13500588CD0 /* KeyboardApperanceHelper.swift in Sources */,
 				49B597E52594342700300565 /* HighScoreViewController.swift in Sources */,
 				4966E0DE259C123D002E0C88 /* GameMode.swift in Sources */,
 				4966E0D1259C0676002E0C88 /* GameOptionsViewController.swift in Sources */,

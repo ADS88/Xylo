@@ -33,10 +33,12 @@ class GameViewController: UIViewController, Storyboarded {
     var soundToButton = [String:UIButton]()
     var score: Int64 = 0
     var gameMode: Int = 0
+    let keyboardAppearanceHelper = KeyboardAppearanceHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttons = [cButton, dButton, eButton, fButton, gButton, aButton, bButton]
+        keyboardAppearanceHelper.setupKeyboard(buttons, withAppearance: UserDefaults.standard.string(forKey: "currentKeyboard")!)
         soundToButton = [
             "C": cButton,
             "D": dButton,
