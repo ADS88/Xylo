@@ -111,18 +111,18 @@ class GameViewController: UIViewController, Storyboarded {
     }
     
     func playKeys(_ keys: [String]){
-        var delay: Double = 1.0
-        for key in keys{
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                self.playSound(soundName: key)
+        var i = 0
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.8, repeats: true) { timer in
+            if i < keys.count {
+                self.playSound(soundName: keys[i])
                 if self.gameMode != GameMode.PITCH_IDENTIFICATION.rawValue {
-                    self.buttonOpaqueOnClickEffect(button: self.soundToButton[key]! ,newOpacity: 0.0)
+                    self.buttonOpaqueOnClickEffect(button: self.soundToButton[keys[i]]! ,newOpacity: 0.0)
+                    i += 1
                 }
+            } else {
+                self.setKeysClickable(to: true)
+                timer.invalidate()
             }
-            delay += 1
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            self.setKeysClickable(to: true)
         }
     }
     
@@ -132,18 +132,18 @@ class GameViewController: UIViewController, Storyboarded {
     
     func playSound(soundName: String) {
         guard let url = Bundle.main.url(forResource: soundName, withExtension: "wav") else { return }
-            do {
-                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-                try AVAudioSession.sharedInstance().setActive(true)
-
-                player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
-                guard let player = player else { return }
-
-                player.play()
-
-            } catch let error {
-                print(error.localizedDescription)
-            }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+            guard let player = player else { return }
+            
+            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 
 }
