@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="shopItemButton" destination="C6P-Bi-hib" id="EDR-xt-wh8"/>
                 <outlet property="shopItemCost" destination="T1O-q4-2tJ" id="0Hh-bo-dHN"/>
+                <outlet property="shopItemCostStackView" destination="f1H-Wl-TbE" id="DAQ-rL-Xza"/>
                 <outlet property="shopItemImage" destination="pZa-gN-cX5" id="s5n-Fb-Y9O"/>
                 <outlet property="shopItemTitle" destination="T75-Tp-FtQ" id="6Mg-9z-0El"/>
             </connections>

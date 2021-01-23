@@ -13,6 +13,7 @@ class ShopItemView: UIView {
     @IBOutlet weak var shopItemTitle: UILabel!
     @IBOutlet weak var shopItemButton: UIButton!
     @IBOutlet weak var shopItemCost: UILabel!
+    @IBOutlet weak var shopItemCostStackView: UIStackView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

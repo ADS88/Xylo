@@ -111,6 +111,7 @@ extension ShopViewController: iCarouselDataSource, iCarouselDelegate {
         if shopItem.hasBeenPurchased {
             view.shopItemButton.setTitle("Use", for: .normal)
             view.shopItemButton.backgroundColor = UIColor(named: "xyloBlue")
+            view.shopItemCostStackView.alpha = 0
         } else if shopItem.cost >= userMoney {
             view.shopItemButton.isEnabled = false
         }
