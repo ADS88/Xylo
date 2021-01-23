@@ -10,13 +10,13 @@ import UIKit
 struct KeyboardAppearanceHelper {
     func setupKeyboard(_ buttons: [UIButton], withAppearance appearance: String){
         switch appearance {
-        case "Black Keys":
+        case "Black Keyboard":
             coloredKeyBoard(buttons: buttons, color: .black)
-        case "Gold Keys":
-            coloredKeyBoard(buttons: buttons, color: .yellow)
-        case "Invisible Keys":
+        case "Gold Keyboard":
+            coloredKeyBoard(buttons: buttons, color: #colorLiteral(red: 1, green: 0.8431372549, blue: 0, alpha: 1))
+        case "Invisible Keyboard":
             invisibleKeys(buttons: buttons)
-        case "Pretty Pink":
+        case "Pretty Pink Keyboard":
             coloredKeyBoard(buttons: buttons, color: .systemPink)
         default:
             break

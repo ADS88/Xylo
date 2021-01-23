@@ -2,13 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Black Keys</key>
+	<key>Black Keyboard</key>
 	<integer>100</integer>
-	<key>Invisible Keys</key>
+	<key>Invisible Keyboard</key>
 	<integer>500</integer>
-	<key>Gold Keys</key>
+	<key>Gold Keyboard</key>
 	<integer>1000</integer>
-	<key>Pretty Pink</key>
+	<key>Pretty Pink Keyboard</key>
 	<integer>250</integer>
 </dict>
 </plist>
