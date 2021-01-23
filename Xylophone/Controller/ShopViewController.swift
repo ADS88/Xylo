@@ -97,17 +97,20 @@ extension ShopViewController: iCarouselDataSource, iCarouselDelegate {
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         
         let view = ShopItemView()
-        view.frame.size = CGSize(width: self.view.frame.size.width/1.2, height: self.view.frame.size.height / 1.4)
+        view.frame.size = CGSize(width: self.view.frame.size.width/1.2, height: self.view.frame.size.height / 1.2)
         let shopItem = shopItems[index]
         view.shopItemTitle.text = shopItem.name
         let image = UIImage(named: shopItem.imageName!)
         view.shopItemImage.image = image
-        view.layer.borderColor = UIColor(named: "xyloPurple")?.cgColor
         view.shopItemCost.text = String(shopItem.cost)
+        
+        view.layer.borderWidth = 10
+        view.layer.borderColor = UIColor(named: "xyloBlue")?.cgColor
+        view.layer.cornerRadius = 20
         
         if shopItem.hasBeenPurchased {
             view.shopItemButton.setTitle("Use", for: .normal)
-            view.shopItemButton.backgroundColor = .blue
+            view.shopItemButton.backgroundColor = UIColor(named: "xyloBlue")
         } else if shopItem.cost >= userMoney {
             view.shopItemButton.isEnabled = false
         }
