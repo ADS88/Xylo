@@ -20,6 +20,7 @@
 		496A30F625A53A9A0009AD18 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A30F325A53A9A0009AD18 /* Storyboarded.swift */; };
 		496A30F725A53A9A0009AD18 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A30F425A53A9A0009AD18 /* MainCoordinator.swift */; };
 		496A30F825A53A9A0009AD18 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496A30F525A53A9A0009AD18 /* Coordinator.swift */; };
+		496A6E8C25BBD123005F5D29 /* highC.wav in Resources */ = {isa = PBXBuildFile; fileRef = 496A6E8B25BBD123005F5D29 /* highC.wav */; };
 		499B372325A9431400588CD0 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B372225A9431400588CD0 /* Song.swift */; };
 		499B372D25A951DC00588CD0 /* EnterHighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B372C25A951DC00588CD0 /* EnterHighScoreViewController.swift */; };
 		499B373025A9566F00588CD0 /* HighScoreBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499B372F25A9566F00588CD0 /* HighScoreBrain.swift */; };
@@ -44,7 +45,6 @@
 		49B597E125942E0500300565 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597E025942E0500300565 /* MenuViewController.swift */; };
 		49B597E52594342700300565 /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597E42594342700300565 /* HighScoreViewController.swift */; };
 		49B99D7E25946999005E15B6 /* Xylophone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49B99D61259463B6005E15B6 /* Xylophone.xcdatamodeld */; };
-		49F68F6525BBB5D0008ECBC4 /* highC.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49F68F6425BBB5D0008ECBC4 /* highC.wav */; };
 		734D60898F081EFD444BA805 /* Pods_Xylophone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9989F2061BAEF63FF9F74D /* Pods_Xylophone.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +62,7 @@
 		496A30F325A53A9A0009AD18 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		496A30F425A53A9A0009AD18 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		496A30F525A53A9A0009AD18 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		496A6E8B25BBD123005F5D29 /* highC.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = highC.wav; sourceTree = "<group>"; };
 		499B372225A9431400588CD0 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		499B372C25A951DC00588CD0 /* EnterHighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterHighScoreViewController.swift; sourceTree = "<group>"; };
 		499B372F25A9566F00588CD0 /* HighScoreBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreBrain.swift; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		49B597E025942E0500300565 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		49B597E42594342700300565 /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		49B99D62259463B6005E15B6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		49F68F6425BBB5D0008ECBC4 /* highC.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = highC.wav; sourceTree = "<group>"; };
 		4B9989F2061BAEF63FF9F74D /* Pods_Xylophone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xylophone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6019D872FC8F6DAEA2AF5978 /* Pods-Xylophone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xylophone.release.xcconfig"; path = "Target Support Files/Pods-Xylophone/Pods-Xylophone.release.xcconfig"; sourceTree = "<group>"; };
 		9A63B5BCEE07370DCB8DDF3B /* Pods-Xylophone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xylophone.debug.xcconfig"; path = "Target Support Files/Pods-Xylophone/Pods-Xylophone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		49B597C52594184A00300565 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				49F68F6425BBB5D0008ECBC4 /* highC.wav */,
+				496A6E8B25BBD123005F5D29 /* highC.wav */,
 				49B597C62594184A00300565 /* A.wav */,
 				49B597C72594184A00300565 /* lowC.wav */,
 				49B597C82594184A00300565 /* B.wav */,
@@ -303,7 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B597D12594184A00300565 /* G.wav in Resources */,
-				49F68F6525BBB5D0008ECBC4 /* highC.wav in Resources */,
+				496A6E8C25BBD123005F5D29 /* highC.wav in Resources */,
 				49B597B725940D6700300565 /* LaunchScreen.storyboard in Resources */,
 				4966E0FB259EE464002E0C88 /* preloadeddata.plist in Resources */,
 				49B597D02594184A00300565 /* F.wav in Resources */,
