@@ -27,4 +27,9 @@ class MenuViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
 }
