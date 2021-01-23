@@ -10,7 +10,6 @@ import Foundation
 struct SongKeyGenerationStrategy : KeyGenerationStrategy {
     
     var notes = [String]()
-    var sounds = [String]()
     var keysToPlay = 1
     
     mutating func generateKeys() -> [String] {
@@ -28,9 +27,8 @@ struct SongKeyGenerationStrategy : KeyGenerationStrategy {
         keysToPlay = 1
     }
     
-    init(notes: [String], sounds: [String]) {
+    init(notes: [String]) {
         self.notes = notes
-        self.sounds = sounds
     }
     
 }

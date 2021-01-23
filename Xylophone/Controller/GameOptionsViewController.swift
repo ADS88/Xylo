@@ -41,7 +41,7 @@ class GameOptionsViewController: UIViewController, Storyboarded {
     func startGame(){
         let keyGenerationStrategy: KeyGenerationStrategy
         if carousel.currentItemIndex == GameMode.SONG.rawValue {
-            keyGenerationStrategy = SongKeyGenerationStrategy(notes: chosenSong.notes, sounds: ["C", "D", "E", "F", "G", "A", "B"])
+            keyGenerationStrategy = SongKeyGenerationStrategy(notes: chosenSong.notes)
         } else {
             keyGenerationStrategy = RandomKeyGenerationStrategy(sounds: ["C", "D", "E", "F", "G", "A", "B"])
         }
