@@ -34,7 +34,7 @@
 		49B597B425940D6700300565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B597B325940D6700300565 /* Assets.xcassets */; };
 		49B597B725940D6700300565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B597B525940D6700300565 /* LaunchScreen.storyboard */; };
 		49B597CD2594184A00300565 /* A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49B597C62594184A00300565 /* A.wav */; };
-		49B597CE2594184A00300565 /* C.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49B597C72594184A00300565 /* C.wav */; };
+		49B597CE2594184A00300565 /* lowC.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49B597C72594184A00300565 /* lowC.wav */; };
 		49B597CF2594184A00300565 /* B.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49B597C82594184A00300565 /* B.wav */; };
 		49B597D02594184A00300565 /* F.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49B597C92594184A00300565 /* F.wav */; };
 		49B597D12594184A00300565 /* G.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49B597CA2594184A00300565 /* G.wav */; };
@@ -44,6 +44,7 @@
 		49B597E125942E0500300565 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597E025942E0500300565 /* MenuViewController.swift */; };
 		49B597E52594342700300565 /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B597E42594342700300565 /* HighScoreViewController.swift */; };
 		49B99D7E25946999005E15B6 /* Xylophone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49B99D61259463B6005E15B6 /* Xylophone.xcdatamodeld */; };
+		49F68F6525BBB5D0008ECBC4 /* highC.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49F68F6425BBB5D0008ECBC4 /* highC.wav */; };
 		734D60898F081EFD444BA805 /* Pods_Xylophone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9989F2061BAEF63FF9F74D /* Pods_Xylophone.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +78,7 @@
 		49B597B625940D6700300565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B597B825940D6700300565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49B597C62594184A00300565 /* A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = A.wav; sourceTree = "<group>"; };
-		49B597C72594184A00300565 /* C.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C.wav; sourceTree = "<group>"; };
+		49B597C72594184A00300565 /* lowC.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lowC.wav; sourceTree = "<group>"; };
 		49B597C82594184A00300565 /* B.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = B.wav; sourceTree = "<group>"; };
 		49B597C92594184A00300565 /* F.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = F.wav; sourceTree = "<group>"; };
 		49B597CA2594184A00300565 /* G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = G.wav; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		49B597E025942E0500300565 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		49B597E42594342700300565 /* HighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		49B99D62259463B6005E15B6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		49F68F6425BBB5D0008ECBC4 /* highC.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = highC.wav; sourceTree = "<group>"; };
 		4B9989F2061BAEF63FF9F74D /* Pods_Xylophone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xylophone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6019D872FC8F6DAEA2AF5978 /* Pods-Xylophone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xylophone.release.xcconfig"; path = "Target Support Files/Pods-Xylophone/Pods-Xylophone.release.xcconfig"; sourceTree = "<group>"; };
 		9A63B5BCEE07370DCB8DDF3B /* Pods-Xylophone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xylophone.debug.xcconfig"; path = "Target Support Files/Pods-Xylophone/Pods-Xylophone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,8 +209,9 @@
 		49B597C52594184A00300565 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				49F68F6425BBB5D0008ECBC4 /* highC.wav */,
 				49B597C62594184A00300565 /* A.wav */,
-				49B597C72594184A00300565 /* C.wav */,
+				49B597C72594184A00300565 /* lowC.wav */,
 				49B597C82594184A00300565 /* B.wav */,
 				49B597C92594184A00300565 /* F.wav */,
 				49B597CA2594184A00300565 /* G.wav */,
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49B597D12594184A00300565 /* G.wav in Resources */,
+				49F68F6525BBB5D0008ECBC4 /* highC.wav in Resources */,
 				49B597B725940D6700300565 /* LaunchScreen.storyboard in Resources */,
 				4966E0FB259EE464002E0C88 /* preloadeddata.plist in Resources */,
 				49B597D02594184A00300565 /* F.wav in Resources */,
@@ -311,7 +315,7 @@
 				49B597D32594184A00300565 /* D.wav in Resources */,
 				49B597B225940D6600300565 /* Main.storyboard in Resources */,
 				4966E0EC259D5645002E0C88 /* HighScoreTableViewCell.xib in Resources */,
-				49B597CE2594184A00300565 /* C.wav in Resources */,
+				49B597CE2594184A00300565 /* lowC.wav in Resources */,
 				495EF1CA25A54EDB00797CF4 /* ShopItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

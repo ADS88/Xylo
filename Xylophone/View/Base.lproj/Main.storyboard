@@ -21,8 +21,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="r7g-lT-lgv" userLabel="Key Stack View">
                                 <rect key="frame" x="0.0" y="104.5" width="414" height="737.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j97-PM-FpI" userLabel="cButton">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="88"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j97-PM-FpI" userLabel="lowCButton">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="74.5"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,7 +32,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecQ-Vn-3G8" userLabel="dButton">
-                                        <rect key="frame" x="15" y="108" width="384" height="88.5"/>
+                                        <rect key="frame" x="15" y="94.5" width="384" height="75"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,7 +42,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-37-1Na" userLabel="eButton">
-                                        <rect key="frame" x="20" y="216.5" width="374" height="88"/>
+                                        <rect key="frame" x="20" y="189.5" width="374" height="74.5"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-8t-kY4" userLabel="fButton">
-                                        <rect key="frame" x="25" y="324.5" width="364" height="88.5"/>
+                                        <rect key="frame" x="25" y="284" width="364" height="75"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,7 +62,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-6z-YIv" userLabel="gButton">
-                                        <rect key="frame" x="30" y="433" width="354" height="88"/>
+                                        <rect key="frame" x="30" y="379" width="354" height="74.5"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,7 +72,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dw-5P-mW8" userLabel="aButton">
-                                        <rect key="frame" x="35" y="541" width="344" height="88.5"/>
+                                        <rect key="frame" x="35" y="473.5" width="344" height="74.5"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,7 +82,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UI-LJ-jST" userLabel="bButton">
-                                        <rect key="frame" x="40" y="649.5" width="334" height="88"/>
+                                        <rect key="frame" x="40" y="568" width="334" height="75"/>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,12 +91,22 @@
                                             <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7tS-lr-0l9"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpb-1l-pRB" userLabel="highCButton">
+                                        <rect key="frame" x="45" y="663" width="324" height="74.5"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="S8U-6z-YIv" firstAttribute="leading" secondItem="r7g-lT-lgv" secondAttribute="leading" constant="30" id="4pr-rO-e7C"/>
                                     <constraint firstAttribute="trailing" secondItem="4UI-LJ-jST" secondAttribute="trailing" constant="40" id="82Y-hR-l81"/>
                                     <constraint firstItem="4UI-LJ-jST" firstAttribute="leading" secondItem="r7g-lT-lgv" secondAttribute="leading" constant="40" id="9kT-pd-8Nq"/>
+                                    <constraint firstAttribute="trailing" secondItem="dpb-1l-pRB" secondAttribute="trailing" constant="45" id="TQU-gT-zSh"/>
                                     <constraint firstItem="n1S-37-1Na" firstAttribute="leading" secondItem="r7g-lT-lgv" secondAttribute="leading" constant="20" id="VpR-1P-gYk"/>
+                                    <constraint firstItem="dpb-1l-pRB" firstAttribute="leading" secondItem="r7g-lT-lgv" secondAttribute="leading" constant="45" id="XVH-OE-dC8"/>
                                     <constraint firstAttribute="trailing" secondItem="j97-PM-FpI" secondAttribute="trailing" constant="10" id="bDr-oQ-TbP"/>
                                     <constraint firstAttribute="trailing" secondItem="n1S-37-1Na" secondAttribute="trailing" constant="20" id="ceW-l6-6VO"/>
                                     <constraint firstAttribute="trailing" secondItem="Lbz-8t-kY4" secondAttribute="trailing" constant="25" id="eqg-qc-SNG"/>
@@ -137,11 +147,12 @@
                     <connections>
                         <outlet property="aButton" destination="9dw-5P-mW8" id="K4z-Cq-7x2"/>
                         <outlet property="bButton" destination="4UI-LJ-jST" id="uYg-XX-kHd"/>
-                        <outlet property="cButton" destination="j97-PM-FpI" id="sM1-Ap-def"/>
                         <outlet property="dButton" destination="ecQ-Vn-3G8" id="Ml8-4r-3vW"/>
                         <outlet property="eButton" destination="n1S-37-1Na" id="lvk-RW-j5Z"/>
                         <outlet property="fButton" destination="Lbz-8t-kY4" id="V4n-vW-IBx"/>
                         <outlet property="gButton" destination="S8U-6z-YIv" id="6CR-gM-VHE"/>
+                        <outlet property="highCButton" destination="dpb-1l-pRB" id="r1G-lC-YrA"/>
+                        <outlet property="lowCButton" destination="j97-PM-FpI" id="sM1-Ap-def"/>
                         <outlet property="scoreLabel" destination="MgA-lX-yLD" id="S1V-F5-KcM"/>
                     </connections>
                 </viewController>
@@ -487,6 +498,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

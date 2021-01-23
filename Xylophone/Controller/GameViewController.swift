@@ -13,20 +13,21 @@ class GameViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
 
-    @IBOutlet weak var cButton: UIButton!
+    @IBOutlet weak var lowCButton: UIButton!
     @IBOutlet weak var dButton: UIButton!
     @IBOutlet weak var eButton: UIButton!
     @IBOutlet weak var fButton: UIButton!
     @IBOutlet weak var gButton: UIButton!
     @IBOutlet weak var aButton: UIButton!
     @IBOutlet weak var bButton: UIButton!
+    @IBOutlet weak var highCButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     
     let highScoreBrain = HighScoreBrain()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var keyGenerationStrategy : KeyGenerationStrategy!
     var player: AVAudioPlayer?
-    let sounds = ["C", "D", "E", "F", "G", "A", "B"]
+    let sounds = ["lowC", "D", "E", "F", "G", "A", "B", "highC"]
     var expectedSounds = [String]()
     var currentIndex = 0
     var buttons = [UIButton]()
@@ -37,16 +38,17 @@ class GameViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttons = [cButton, dButton, eButton, fButton, gButton, aButton, bButton]
+        buttons = [lowCButton, dButton, eButton, fButton, gButton, aButton, bButton, highCButton]
         keyboardAppearanceHelper.setupKeyboard(buttons, withAppearance: UserDefaults.standard.string(forKey: "currentKeyboard")!)
         soundToButton = [
-            "C": cButton,
+            "lowC": lowCButton,
             "D": dButton,
             "E": eButton,
             "F": fButton,
             "G": gButton,
             "A": aButton,
-            "B": bButton
+            "B": bButton,
+            "highC": highCButton
         ]
         if gameMode == GameMode.FREE_PLAY.rawValue{
             scoreLabel.alpha = 0.0

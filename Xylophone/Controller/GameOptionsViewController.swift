@@ -17,9 +17,9 @@ class GameOptionsViewController: UIViewController, Storyboarded {
     
     
     let songs = [Song(name:"Mary had a little lamb", notes:  ["B", "A", "G", "A", "B", "B", "B", "A", "A", "A", "B", "B", "B", "B", "A", "G", "A", "B", "B", "B", "B", "A", "A", "B", "A", "G"]),
-                 Song(name: "La Bamba", notes: ["B"]),
-                 Song(name: "Mo Bamba", notes: ["C"]),
-                 Song(name: "Bobby Shmurda", notes: ["D"])
+                 Song(name: "Happy birthday", notes: ["lowC", "lowC", "D", "lowC", "F", "E", "lowC", "lowC", "D", "C", "G", "F", "lowC", "lowC", "highC", "A", "F", "E", "D", "highC", "highC", "A", "F", "G", "F"]),
+                 Song(name: "Twinkle twinkle little star", notes: ["lowC", "lowC", "G", "G", "A", "A", "G", "F", "F", "E", "E", "D", "D", "lowC", "G", "G", "F", "F", "E", "E", "D", "G", "G", "F", "F", "E", "E", "D", "lowC", "lowC", "G", "G", "A", "A", "G", "F", "F", "E", "E", "D", "D", "lowC"]),
+                 Song(name: "Imperial March", notes: ["E", "E", "E", "lowC", "G", "E", "lowC", "G", "E", "B", "B", "B", "highC", "G", "E", "lowC", "G", "E", ])
     ]
     
     var chosenSong: Song!
@@ -43,7 +43,7 @@ class GameOptionsViewController: UIViewController, Storyboarded {
         if carousel.currentItemIndex == GameMode.SONG.rawValue {
             keyGenerationStrategy = SongKeyGenerationStrategy(notes: chosenSong.notes)
         } else {
-            keyGenerationStrategy = RandomKeyGenerationStrategy(sounds: ["C", "D", "E", "F", "G", "A", "B"])
+            keyGenerationStrategy = RandomKeyGenerationStrategy(sounds: ["lowC", "D", "E", "F", "G", "A", "B", "highC"])
         }
         self.coordinator?.playGame(gameMode: carousel.currentItemIndex, keyGenerationStrategy: keyGenerationStrategy)
     }
