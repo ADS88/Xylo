@@ -79,12 +79,12 @@ class GameViewController: UIViewController, Storyboarded {
         }
     }
     
-    func gameOver(){
+    func gameOver(finishedText: String = "Game Over!"){
         addUserMoney()
         if highScoreBrain.shouldCreateHighScore(score: score){
-            coordinator?.enterHighScoreName(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score)
+            coordinator?.enterHighScoreName(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score, finishedText: finishedText)
         } else {
-            coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score)
+            coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy, score: score, finishedText: finishedText)
         }
     }
     
@@ -105,7 +105,7 @@ class GameViewController: UIViewController, Storyboarded {
     func newSetOfKeys(){
         expectedSounds = keyGenerationStrategy.generateKeys()
         if expectedSounds.isEmpty{
-            gameOver()
+            gameOver(finishedText: "Finished Song!")
         }
         currentIndex = 0
         setKeysClickable(to: false)

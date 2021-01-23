@@ -12,6 +12,9 @@ class GameOverViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
 
     @IBOutlet weak var scoreText: UILabel!
+    @IBOutlet weak var gameFinishedLabel: UILabel!
+    
+    var gameFinishedText: String!
     var score: Int64 = 0
     var gameMode = 0
     var keyGenerationStrategy: KeyGenerationStrategy!
@@ -28,5 +31,6 @@ class GameOverViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         scoreText.text = "Score: \(score)"
+        gameFinishedLabel.text = gameFinishedText
     }
 }

@@ -38,9 +38,10 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func gameOver(gameMode: Int, keyGenerationStrategy: KeyGenerationStrategy, score: Int64){
+    func gameOver(gameMode: Int, keyGenerationStrategy: KeyGenerationStrategy, score: Int64, finishedText: String){
         hideNavBar()
         let vc = GameOverViewController.instantiate()
+        vc.gameFinishedText = finishedText
         vc.gameMode = gameMode
         vc.keyGenerationStrategy = keyGenerationStrategy
         vc.score = Int64(score)
@@ -74,9 +75,10 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func enterHighScoreName(gameMode: Int, keyGenerationStrategy: KeyGenerationStrategy, score: Int64){
+    func enterHighScoreName(gameMode: Int, keyGenerationStrategy: KeyGenerationStrategy, score: Int64, finishedText: String){
         hideNavBar()
         let vc = EnterHighScoreViewController.instantiate()
+        vc.finishedText = finishedText
         vc.score = score
         vc.keyGenerationStrategy = keyGenerationStrategy
         vc.gameMode = gameMode

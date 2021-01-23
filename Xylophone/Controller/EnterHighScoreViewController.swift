@@ -17,6 +17,7 @@ class EnterHighScoreViewController: UIViewController, Storyboarded, UITextFieldD
     var score: Int64 = 0
     var gameMode = 0
     var keyGenerationStrategy: KeyGenerationStrategy!
+    var finishedText: String!
 
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         var name = "Unknown"
@@ -25,7 +26,7 @@ class EnterHighScoreViewController: UIViewController, Storyboarded, UITextFieldD
             UserDefaults.standard.set(name, forKey: "userName")
         }
         highScoreBrain.createHighScore(name: name, score: score)
-        coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy!, score: score)
+        coordinator?.gameOver(gameMode: gameMode, keyGenerationStrategy: keyGenerationStrategy!, score: score, finishedText: finishedText)
     }
     
     @IBOutlet weak var nameTextField: UITextField!

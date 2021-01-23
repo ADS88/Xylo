@@ -19,7 +19,7 @@ class GameOptionsViewController: UIViewController, Storyboarded {
     let songs = [Song(name:"Mary had a little lamb", notes:  ["B", "A", "G", "A", "B", "B", "B", "A", "A", "A", "B", "B", "B", "B", "A", "G", "A", "B", "B", "B", "B", "A", "A", "B", "A", "G"]),
                  Song(name: "Happy birthday", notes: ["lowC", "lowC", "D", "lowC", "F", "E", "lowC", "lowC", "D", "C", "G", "F", "lowC", "lowC", "highC", "A", "F", "E", "D", "highC", "highC", "A", "F", "G", "F"]),
                  Song(name: "Twinkle twinkle little star", notes: ["lowC", "lowC", "G", "G", "A", "A", "G", "F", "F", "E", "E", "D", "D", "lowC", "G", "G", "F", "F", "E", "E", "D", "G", "G", "F", "F", "E", "E", "D", "lowC", "lowC", "G", "G", "A", "A", "G", "F", "F", "E", "E", "D", "D", "lowC"]),
-                 Song(name: "Imperial March", notes: ["E", "E", "E", "lowC", "G", "E", "lowC", "G", "E", "B", "B", "B", "highC", "G", "E", "lowC", "G", "E", ])
+                 Song(name: "Imperial March", notes: ["E", "E", "E", "lowC", "G", "E", "lowC", "G", "E", "B", "B", "B", "highC", "G", "E", "lowC", "G", "E", ]),
     ]
     
     var chosenSong: Song!
@@ -70,7 +70,6 @@ extension GameOptionsViewController: iCarouselDataSource, iCarouselDelegate {
         view.backgroundColor = gameModes[index].color
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.startGame))
         view.addGestureRecognizer(tapGesture)
-        
         let image = UIImage(systemName: gameModes[index].imageName)
         view.optionImage.image = image
         view.optionTitle.text = gameModes[index].title
