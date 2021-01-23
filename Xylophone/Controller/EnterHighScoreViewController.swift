@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EnterHighScoreViewController: UIViewController, Storyboarded {
+class EnterHighScoreViewController: UIViewController, Storyboarded, UITextFieldDelegate {
     
     @IBOutlet weak var scoreLabel: UILabel!
     weak var coordinator: MainCoordinator?
@@ -32,9 +32,15 @@ class EnterHighScoreViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self
         scoreLabel.text = String(score)
         nameTextField.text = UserDefaults.standard.string(forKey: "userName")
 
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
