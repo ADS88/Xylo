@@ -23,11 +23,11 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DUn-Wa-MEH">
-                    <rect key="frame" x="20" y="320.66666666666674" width="350" height="469.33333333333326"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DUn-Wa-MEH">
+                    <rect key="frame" x="20" y="94" width="350" height="666"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackKeyboard" translatesAutoresizingMaskIntoConstraints="NO" id="pZa-gN-cX5">
-                            <rect key="frame" x="4.3333333333333428" y="0.0" width="341.33333333333326" height="341.33333333333331"/>
+                            <rect key="frame" x="8.3333333333333428" y="0.0" width="333.33333333333326" height="529"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                     <integer key="value" value="15"/>
@@ -35,7 +35,7 @@
                             </userDefinedRuntimeAttributes>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-Wl-TbE">
-                            <rect key="frame" x="153" y="345.33333333333331" width="44" height="20"/>
+                            <rect key="frame" x="153" y="533" width="44" height="20"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IEC-Aw-skc">
                                     <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="18.666666666666664"/>
@@ -54,15 +54,19 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cool keyboard" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T75-Tp-FtQ">
-                            <rect key="frame" x="82" y="369.33333333333331" width="186" height="36"/>
+                            <rect key="frame" x="82" y="557" width="186" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="D8f-DB-vcR"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="textColor" name="xyloBlue"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6P-Bi-hib">
-                            <rect key="frame" x="75" y="409.33333333333331" width="200" height="60"/>
+                            <rect key="frame" x="75" y="601" width="200" height="65"/>
                             <color key="backgroundColor" name="xyloGreen"/>
                             <constraints>
+                                <constraint firstAttribute="height" constant="65" id="2oa-7S-1gv"/>
                                 <constraint firstAttribute="width" constant="200" id="gas-dh-1Fc"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -85,9 +89,11 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="DUn-Wa-MEH" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0Kd-Bk-nF5"/>
+                <constraint firstItem="DUn-Wa-MEH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="4z1-WY-mUo"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DUn-Wa-MEH" secondAttribute="trailing" constant="20" id="cR1-VB-UCd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DUn-Wa-MEH" secondAttribute="bottom" constant="50" id="kbg-Be-qRX"/>
                 <constraint firstItem="DUn-Wa-MEH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wHp-7O-W6D"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="DUn-Wa-MEH" secondAttribute="bottom" constant="20" id="zKp-hG-7Cd"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -99,7 +105,7 @@
     </objects>
     <resources>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="blackKeyboard" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="blackKeyboard" width="333.33334350585938" height="500"/>
         <namedColor name="xyloBlue">
             <color red="0.31372549019607843" green="0.70196078431372544" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

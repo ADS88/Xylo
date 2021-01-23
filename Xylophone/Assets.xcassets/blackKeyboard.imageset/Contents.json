@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Blackeyboard-2.png",
+      "filename" : "newBlackKeyboard.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Blackeyboard-1.png",
+      "filename" : "newBlackKeyboard-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Blackeyboard.png",
+      "filename" : "newBlackKeyboard-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
