@@ -114,13 +114,13 @@ class GameViewController: UIViewController, Storyboarded {
     
     func playKeys(_ keys: [String]){
         var i = 0
-        let timer = Timer.scheduledTimer(withTimeInterval: 0.8, repeats: true) { timer in
+        Timer.scheduledTimer(withTimeInterval: 0.8, repeats: true) { timer in
             if i < keys.count {
                 self.playSound(soundName: keys[i])
                 if self.gameMode != GameMode.PITCH_IDENTIFICATION.rawValue {
                     self.buttonOpaqueOnClickEffect(button: self.soundToButton[keys[i]]! ,newOpacity: 0.0)
-                    i += 1
                 }
+                i += 1
             } else {
                 self.setKeysClickable(to: true)
                 timer.invalidate()
