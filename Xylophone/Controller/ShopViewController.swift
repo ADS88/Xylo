@@ -114,6 +114,7 @@ extension ShopViewController: iCarouselDataSource, iCarouselDelegate {
             view.shopItemCostStackView.alpha = 0
         } else if shopItem.cost >= userMoney {
             view.shopItemButton.isEnabled = false
+            view.shopItemButton.backgroundColor = .lightGray
         }
         if shopItem.name == currentlyUsedItemName {
             view.shopItemButton.isHidden = true
