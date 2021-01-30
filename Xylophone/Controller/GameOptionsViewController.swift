@@ -51,10 +51,10 @@ class GameOptionsViewController: UIViewController, Storyboarded {
     }
     
     
-    let gameModes = [GameModeOption(title: "Memory", description: "Notes will appear to be tapped on the screen. Tap the correct notes back to gain points. The amount of notes to remember increases over time ", color: UIColor(named: "xyloPurple") ?? .purple, imageName: "music.quarternote.3"),
-                     GameModeOption(title: "Pitch Detection", description: "Notes will be played without visual indication. Tap the correct notes back to gain points. The amount of notes to remember increases over time", color: UIColor(named: "xyloBlue") ?? .blue, imageName: "music.note"),
-                     GameModeOption(title: "Song Mode", description: "Notes of a chosen song will be played visual indication. Tap the correct notes back to gain points. The amount of notes to remember increases over time", color: UIColor(named: "xyloOrange") ?? .orange, imageName: "music.note.list"),
-                     GameModeOption(title: "Free Play", description: "Jam out on the keyboard", color: UIColor(named: "xlyoGreen") ?? .lightGray, imageName: "scribble")
+    let gameModes = [GameModeOption(title: "Memory", description: "Repeat the notes that are played on the screen", color: UIColor(named: "xyloPurple") ?? .purple, imageName: "music.quarternote.3"),
+                     GameModeOption(title: "Pitch Detection", description: "Repeat the notes that you hear being played", color: UIColor(named: "xyloBlue") ?? .blue, imageName: "music.note"),
+                     GameModeOption(title: "Song Mode", description: "Repeat the notes of a song of your choice", color: UIColor(named: "xyloOrange") ?? .orange, imageName: "music.note.list"),
+                     GameModeOption(title: "Free Play", description: "Free play on the keyboard", color: UIColor(named: "xlyoGreen") ?? .lightGray, imageName: "scribble")
     ]
     
 }
