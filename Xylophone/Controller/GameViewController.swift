@@ -95,10 +95,9 @@ class GameViewController: UIViewController, Storyboarded {
     }
     
     func buttonOpaqueOnClickEffect(button: UIButton, newOpacity: CGFloat){
-        let oringinalAlpha = button.alpha
         button.alpha = newOpacity
           DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-              button.alpha = oringinalAlpha
+              button.alpha = 1
           }
     }
     
@@ -114,16 +113,20 @@ class GameViewController: UIViewController, Storyboarded {
     
     func playKeys(_ keys: [String]){
         var i = 0
-        Timer.scheduledTimer(withTimeInterval: 0.8, repeats: true) { timer in
-            if i < keys.count {
-                self.playSound(soundName: keys[i])
-                if self.gameMode != GameMode.PITCH_IDENTIFICATION.rawValue {
-                    self.buttonOpaqueOnClickEffect(button: self.soundToButton[keys[i]]! ,newOpacity: 0.0)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            let delayBetweenKeys = self.gameMode == GameMode.SONG.rawValue ? 0.6 : 0.9
+            Timer.scheduledTimer(withTimeInterval: delayBetweenKeys, repeats: true) { timer in
+                if i < keys.count {
+                    self.playSound(soundName: keys[i])
+                    if self.gameMode != GameMode.PITCH_IDENTIFICATION.rawValue {
+                        self.buttonOpaqueOnClickEffect(button: self.soundToButton[keys[i]]! ,newOpacity: 0.0)
+                    }
+                    i += 1
+                } else {
+                    self.setKeysClickable(to: true)
+                    timer.invalidate()
                 }
-                i += 1
-            } else {
-                self.setKeysClickable(to: true)
-                timer.invalidate()
             }
         }
     }
