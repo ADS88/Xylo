@@ -41,7 +41,11 @@
                         </label>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="gEE-F1-ZxC" firstAttribute="leading" secondItem="APq-PH-cMo" secondAttribute="leading" constant="10" id="2Yb-B1-cA5"/>
                         <constraint firstItem="LY9-OR-bbG" firstAttribute="leading" secondItem="APq-PH-cMo" secondAttribute="leading" constant="10" id="3Kz-AJ-24j"/>
+                        <constraint firstItem="LY9-OR-bbG" firstAttribute="leading" secondItem="APq-PH-cMo" secondAttribute="leading" constant="10" id="Spw-A6-h5J"/>
+                        <constraint firstAttribute="trailing" secondItem="LY9-OR-bbG" secondAttribute="trailing" constant="10" id="blx-ph-Y1F"/>
+                        <constraint firstAttribute="trailing" secondItem="gEE-F1-ZxC" secondAttribute="trailing" constant="10" id="o1f-Od-P2h"/>
                     </constraints>
                 </stackView>
             </subviews>

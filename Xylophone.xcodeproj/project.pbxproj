@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4956417925C4FADF0073A3C7 /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4956417825C4FADF0073A3C7 /* Songs.swift */; };
 		495EF1CA25A54EDB00797CF4 /* ShopItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 495EF1C925A54EDB00797CF4 /* ShopItemView.xib */; };
 		495EF1CD25A54EEC00797CF4 /* ShopItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EF1CC25A54EEC00797CF4 /* ShopItemView.swift */; };
 		4966E0D1259C0676002E0C88 /* GameOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966E0D0259C0676002E0C88 /* GameOptionsViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4956417825C4FADF0073A3C7 /* Songs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
 		495EF1C925A54EDB00797CF4 /* ShopItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopItemView.xib; sourceTree = "<group>"; };
 		495EF1CC25A54EEC00797CF4 /* ShopItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemView.swift; sourceTree = "<group>"; };
 		4966E0D0259C0676002E0C88 /* GameOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				49A23DE5259F2C00003718FE /* SongKeyGenerationStrategy.swift */,
 				499B372225A9431400588CD0 /* Song.swift */,
 				499B372F25A9566F00588CD0 /* HighScoreBrain.swift */,
+				4956417825C4FADF0073A3C7 /* Songs.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4956417925C4FADF0073A3C7 /* Songs.swift in Sources */,
 				49A23DDF259F2A5A003718FE /* KeyGenerationStrategy.swift in Sources */,
 				49B597D825941D8A00300565 /* GameOverViewController.swift in Sources */,
 				49B597E125942E0500300565 /* MenuViewController.swift in Sources */,

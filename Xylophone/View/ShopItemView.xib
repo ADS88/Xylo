@@ -28,7 +28,7 @@
                     <rect key="frame" x="20" y="94" width="350" height="666"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackKeyboard" translatesAutoresizingMaskIntoConstraints="NO" id="pZa-gN-cX5">
-                            <rect key="frame" x="8.3333333333333428" y="0.0" width="333.33333333333326" height="529"/>
+                            <rect key="frame" x="8.3333333333333428" y="0.0" width="333.66666666666663" height="529"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                     <integer key="value" value="15"/>
@@ -38,7 +38,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1H-Wl-TbE">
                             <rect key="frame" x="153" y="533" width="44" height="20"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IEC-Aw-skc">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IEC-Aw-skc">
                                     <rect key="frame" x="0.0" y="0.99999999999999822" width="20" height="18.666666666666664"/>
                                     <color key="tintColor" name="xyloBlue"/>
                                     <constraints>
@@ -105,8 +105,8 @@
         </view>
     </objects>
     <resources>
-        <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="blackKeyboard" width="333.33334350585938" height="500"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="xyloBlue">
             <color red="0.31372549019607843" green="0.70196078431372544" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

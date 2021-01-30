@@ -24,7 +24,7 @@ class ShopViewController: UIViewController, Storyboarded {
         userMoney = Int64(UserDefaults.standard.integer(forKey: "userMoney"))
         currentlyUsedItemName = UserDefaults.standard.string(forKey: "currentKeyboard")!
         
-        let image = UIImage(systemName: "bitcoinsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "xyloBlue")!)
+        let image = UIImage(systemName: "dollarsign.circle.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "xyloBlue")!)
        
         let coinButton = UIBarButtonItem(image: image, style: .plain, target: self, action: nil)
         

@@ -199,9 +199,7 @@
                                                     <constraint firstAttribute="width" constant="200" id="VNi-Ic-9m7"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Play again">
-                                                    <color key="titleColor" name="AccentColor"/>
-                                                </state>
+                                                <state key="normal" title="Play again"/>
                                                 <connections>
                                                     <action selector="playAgainPressed:" destination="aiR-7Q-S6h" eventType="touchUpInside" id="osN-fs-0J6"/>
                                                 </connections>
@@ -212,9 +210,7 @@
                                                     <constraint firstAttribute="width" constant="200" id="cWM-lt-sa6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="Main menu">
-                                                    <color key="titleColor" name="AccentColor"/>
-                                                </state>
+                                                <state key="normal" title="Main menu"/>
                                                 <connections>
                                                     <action selector="goToMenuPressed:" destination="aiR-7Q-S6h" eventType="touchUpInside" id="VSo-UC-DwR"/>
                                                 </connections>
@@ -336,32 +332,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Doj-HI-5xq" customClass="iCarousel">
-                                <rect key="frame" x="20" y="44" width="374" height="708"/>
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJU-ou-qHp">
-                                <rect key="frame" x="20" y="752" width="374" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="tP9-8O-4QV"/>
-                                </constraints>
-                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0JF-53-RpL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0JF-53-RpL" firstAttribute="trailing" secondItem="Doj-HI-5xq" secondAttribute="trailing" constant="20" id="KIC-gP-dYn"/>
-                            <constraint firstItem="0JF-53-RpL" firstAttribute="bottom" secondItem="KJU-ou-qHp" secondAttribute="bottom" constant="10" id="P02-tQ-f2d"/>
                             <constraint firstItem="Doj-HI-5xq" firstAttribute="leading" secondItem="0JF-53-RpL" secondAttribute="leading" constant="20" id="P2O-Jt-1yw"/>
+                            <constraint firstItem="0JF-53-RpL" firstAttribute="bottom" secondItem="Doj-HI-5xq" secondAttribute="bottom" id="haX-iC-Yr4"/>
                             <constraint firstItem="Doj-HI-5xq" firstAttribute="top" secondItem="0JF-53-RpL" secondAttribute="top" id="mxF-nM-he3"/>
                             <constraint firstItem="Doj-HI-5xq" firstAttribute="leading" secondItem="0JF-53-RpL" secondAttribute="leading" constant="20" id="uJp-Rw-B3D"/>
-                            <constraint firstItem="KJU-ou-qHp" firstAttribute="leading" secondItem="0JF-53-RpL" secondAttribute="leading" constant="20" id="uwx-7X-KrU"/>
-                            <constraint firstItem="0JF-53-RpL" firstAttribute="trailing" secondItem="KJU-ou-qHp" secondAttribute="trailing" constant="20" id="voU-jE-RHi"/>
-                            <constraint firstItem="KJU-ou-qHp" firstAttribute="top" secondItem="Doj-HI-5xq" secondAttribute="bottom" id="zyZ-K8-6Y1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="carousel" destination="Doj-HI-5xq" id="Mma-7E-PtE"/>
-                        <outlet property="songPickerView" destination="KJU-ou-qHp" id="WHu-ge-m4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnC-wy-dmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -487,9 +473,6 @@
     </scenes>
     <resources>
         <image name="xylologo" width="341" height="341"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="xyloBlue">
             <color red="0.31372549019607843" green="0.70196078431372544" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
