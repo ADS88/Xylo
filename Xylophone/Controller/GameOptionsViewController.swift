@@ -20,6 +20,8 @@ class GameOptionsViewController: UIViewController, Storyboarded {
                  Song(name: "Happy birthday", notes: ["lowC", "lowC", "D", "lowC", "F", "E", "lowC", "lowC", "D", "C", "G", "F", "lowC", "lowC", "highC", "A", "F", "E", "D", "highC", "highC", "A", "F", "G", "F"]),
                  Song(name: "Twinkle twinkle little star", notes: ["lowC", "lowC", "G", "G", "A", "A", "G", "F", "F", "E", "E", "D", "D", "lowC", "G", "G", "F", "F", "E", "E", "D", "G", "G", "F", "F", "E", "E", "D", "lowC", "lowC", "G", "G", "A", "A", "G", "F", "F", "E", "E", "D", "D", "lowC"]),
                  Song(name: "Imperial March", notes: ["E", "E", "E", "lowC", "G", "E", "lowC", "G", "E", "B", "B", "B", "highC", "G", "E", "lowC", "G", "E", ]),
+                 Song(name: "Loard of the rings shire theme", notes: ["lowC", "D", "E", "G", "E", "D", "lowC", "E", "G", "A", "highC", "B", "G", "E", "F", "E", "D", "lowC", "D", "E", "G", "E", "D", "lowC", "D", "lowC"]),
+                 Song(name: "Jingle Bells", notes: ["E", "E", "E", "E", "E", "E", "E", "G", "lowC", "D", "E", "F", "F", "F", "F", "F", "E", "E", "E", "E", "E", "D", "D", "E", "D", "G", "E", "E", "E", "E", "E", "E", "E", "G", "lowC", "D", "E", "F", "F", "F", "F", "F", "E", "E", "E", "E", "G", "G", "F", "D", "lowC"])
     ]
     
     var chosenSong: Song!
