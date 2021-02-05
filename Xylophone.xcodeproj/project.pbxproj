@@ -551,7 +551,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrewsturman.Xylophone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewsturman.Xylo;
 				PRODUCT_NAME = Xylo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,7 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andrewsturman.Xylophone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewsturman.Xylo;
 				PRODUCT_NAME = Xylo;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
